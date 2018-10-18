@@ -1,0 +1,11 @@
+mixin newsElem(data)
+  - var newsClass = 'news__elem'
+  article(class=newsClass)
+    .news__elem-side
+      a(href="#hreftonews").news__elem-imgover.js-news-open
+        img(src=data.img, alt="").news__elem-img
+    .news__elem-content
+      a(href="#hreftonews").news__elem-href.js-news-open
+        span !{data.href}
+      p.news__elem-text !{data.text}
+      p.news__elem-date #{data.date}

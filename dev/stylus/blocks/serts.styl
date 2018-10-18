@@ -1,0 +1,91 @@
+.serts
+  pos relative
+  mb 83px
+  @media $LandscapeMin
+    mb 50px
+  .container
+    pos relative
+  &__over
+    pos relative
+    mt 44px
+    .swiper-buttons
+      @media $desktopMedium
+        df()
+        pos relative
+        mt 40px
+        justify-content center
+      @media $LandscapeMin
+        justify-content flex-end
+    .swiper-button-next,
+    .swiper-button-prev
+      mt 0
+      t 160px
+      @media $desktopMax
+        t 135px
+      @media $desktopMedium
+        pos relative
+        t 0
+        mt 0
+        l auto
+        r auto
+    .swiper-button-next
+      @media $desktopMedium
+        ml 20px
+      @media $PortraitMin
+        ml 10px
+  &__imgover
+    db()
+    pos relative
+    bgc #f6f7fb
+    border-radius 5px
+    padding 20px
+    mb 23px
+    &:before
+      content ""
+      pos absolute
+      t 20px
+      b 20px
+      l 20px
+      r 20px
+      bgc alpha(#e8ebf5, 0)
+      transition .7s background-color
+    &:after
+      content ""
+      pos absolute
+      t 50%
+      l 50%
+      size 62px
+      border 2px solid #075e9d
+      mt -31px
+      ml -31px
+      border-radius 50%
+      background-repeat no-repeat
+      background-position center
+      background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAfCAMAAADHso01AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA0lBMVEX///8HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///9dDgUOAAAARHRSTlMAACZ2vOb5P8IImP7ulE0eBg0oEsb3fQwKyN8uLZvjHDfDh4gvD4Gglb5Rvx1Sn4LtNkCZdekQhhNqs0wFa8V35/pBAQOFtKQAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAABJklEQVQoz33SeV+CMBgH8E0FlKEgOq/yIqUoO9SyQ/Pq9/5fUwpsEC5+f7F9Pzt49hBCqEyhWNJ0XSsVC2KGJGyUIVM2MlwxGaxqzXbqbq1qgZmVNDea4K222Kjd4mg2Eu500buiqVz30O1I7mMwpH8yHKAv2GB8RDMZcWbEPIZHL3KDccQTWNNLnlqYhOzjVk4C8vMOfsgB7lVcw0PIGmYqnkELWYcjLEo0cqDHXM9jDYW8zQM85l3Nx5P6x57jsrzklUVdVE8U9fwk86zOOVvQuFeWqgddUsH/tkM8fH0D91YCV+8c3Q8q+ZOxr3Mrru3Nxl6Hrdihkk/6TY1t0sjbRbSMSD3F3QX7w2Ef7FxxCkmpIiSlRJHUWhUfk51V/GPKcxX6C6exL+yOwMR4AAAAAElFTkSuQmCC")
+      opacity 0
+      transition .7s opacity
+    &:hover:before
+      bgc alpha(#e8ebf5, .9)
+    &:hover:after
+      opacity 1
+  &__img
+    border-radius 3px
+    max-width 100%
+    @media $PortraitMedium
+      w 100%
+  &__name
+    c $dark
+    fontify 16px 300 24px
+    text-align center
+    padding 0 15px
+  &__tocat
+    pos absolute
+    t 24px
+    r 0
+    @media $LandscapeMax
+      t 18px
+    @media $LandscapeMin
+      pos relative
+      t 0
+      r auto
+      mt -33px

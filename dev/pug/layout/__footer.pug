@@ -1,0 +1,29 @@
+include ../bemto/bemto.pug
+
++b.FOOTER.footer
+  .container
+    +e.top
+      +e.logo(href="#")
+        +e.logo-img(src="img/logo.png", alt="")
+      +e.ASIDE.side
+        +b.NAV.menu._bot
+          +e.UL.list
+            +e.item
+              +e.href.active(href="#") О компании
+            +e.item
+              +e.href(href="#") Каталог
+            +e.item
+              +e.href(href="#") Опросные листы
+            +e.item
+              +e.href(href="#") Выполненные проекты
+            +e.item
+              +e.href(href="#") Контакты
+        +e.info
+          +e.addr Челябинск, проспект Победы, 238
+          +e.phone(href="tel:+73512252436") +7 (351) 225-24-36
+          +e.mail(href="mailto:sails@k-en.ru") sails@k-en.ru
+    +e.bottom
+      +e.P.copy © ООО «Квантум Энерго», 2018
+      +e.dextra(href="https://www.dextra.ru/", target="_blank")
+        span dextra
+        | Разработка<br>сайта

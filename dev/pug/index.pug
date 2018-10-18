@@ -1,0 +1,334 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    +b.MAIN.content
+    
+      +b.orbits._group1
+        svg(viewbox="0 0 218 901.5").orbit.orbit_elem1
+          path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+   d="M1.500,0.499 C156.945,168.722 249.373,310.377 189.500,550.499 C160.161,668.165 83.274,792.271 1.972,900.261", id="orbit1")
+          circle(r="4.5", fill="rgb(245, 130, 31)")
+            animateMotion(dur="15s", repeatCount="indefinite", calcMode="linear")
+              mpath(xlink:href="#orbit1")
+        svg(viewbox="0 0 240 973.5").orbit.orbit_elem2
+          path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+   d="M2.125,1.461 C46.435,57.461 89.208,105.022 124.500,155.500 C250.878,336.258 329.273,656.969 1.687,972.251", id="orbit2")
+          circle(r="4.5", fill="rgb(7, 94, 157)")
+            animateMotion(dur="12s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+              mpath(xlink:href="#orbit2")
+        
+    
+      +b.SECTION.banner
+        .container
+          +e.carover
+            +e.SPAN.count 
+              span 01
+              | / 04
+            +e.car.swiper-container.js-banner
+              .swiper-wrapper
+                .swiper-slide
+                  +e.content(data-swiper-parallax="-75")
+                    +e.P.name Комплектное распределительное устройство 6 и 10 кВ
+                    +e.href.common__href(href="#") Посмотреть
+                  +e.ASIDE.side(data-swiper-parallax="-300")
+                    +e.img(src="img/banner1.png")
+                .swiper-slide
+                  +e.content(data-swiper-parallax="-75")
+                    +e.P.name Название, которое просто покороче
+                    +e.href.common__href(href="#") Посмотреть
+                  +e.ASIDE.side(data-swiper-parallax="-300")
+                    +e.img(src="img/banner1.png")
+                .swiper-slide
+                  +e.content(data-swiper-parallax="-75")
+                    +e.P.name Название
+                    +e.href.common__href(href="#") Посмотреть
+                  +e.ASIDE.side(data-swiper-parallax="-300")
+                    +e.img(src="img/banner1.png")
+                .swiper-slide
+                  +e.content(data-swiper-parallax="-75")
+                    +e.P.name Название, которое просто очень длинное, ну, чтобы посмотреть, как это будет выглядеть
+                    +e.href.common__href(href="#") Посмотреть
+                  +e.ASIDE.side(data-swiper-parallax="-300")
+                    +e.img(src="img/banner1.png")
+            .swiper-buttons
+              .swiper-button-prev
+              .swiper-button-next
+              
+              
+      +b.SECTION.industry
+        .container
+          +e.NAV.nav
+            +e.UL.list
+              +e.item
+                +e.iconover
+                  +e.icon(src="img/ind1.png")
+                +e.href(href="#") Нефтегазовая отрасль
+              +e.item
+                +e.iconover
+                  +e.icon(src="img/ind2.png")
+                +e.href(href="#") Промышленность и&nbspметаллургия
+              +e.item
+                +e.iconover
+                  +e.icon(src="img/ind3.png")
+                +e.href(href="#") Межрегиональные и&nbsp;городские распределительные сети 
+              +e.item
+                +e.iconover
+                  +e.icon(src="img/ind4.png")
+                +e.href(href="#") Гражданское строительство
+              +e.item
+                +e.iconover
+                  +e.icon(src="img/ind5.png")
+                +e.href(href="#") Электроснабжение индивидуальных объектов
+                
+                
+      +b.SECTION.catalog
+        .container
+          p.common__title Разделы каталога и услуг
+          +e.over
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat1.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span КРУ
+              +e.P.desc Комплектное распределительное устройство
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat2.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span КСО
+              +e.P.desc Камера сборная одностороннего обслуживания
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat3.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span ЯКНО
+              +e.P.desc Ячейка комплектная наружной установки отдельностоящая 
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat4.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span КТПН
+              +e.P.desc Комплектные трансформаторные подстанции
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat5.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span НКУ
+              +e.P.desc Низковольтные комплектные устройства
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat6.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span УКРМ
+              +e.P.desc Установки компенсации реактивной мощности
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat7.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span БМЗ
+              +e.P.desc Блочно модульные здания
+            +e.elem._more
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat8.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span Дополнительные услуги
+              +e.NAV.hrefs
+                +e.UL.hrefs-list
+                  +e.hrefs-item
+                    +e.href(href="#") Корпуса электрооборудования
+                  +e.hrefs-item
+                    +e.href(href="#") Резка металла
+                  +e.hrefs-item
+                    +e.href(href="#") Гибка металла
+          +e.tocat.common__href(href="#") Перейти в каталог
+              
+              
+      +b.SECTION.about
+        .container
+          p.common__title О компании
+          +e.row
+            +e.col
+              p Для универсального применения используются комплектные распределительные устройства (КРУ) одностороннего и двухстороннего обслуживания. Габариты КРУ отличаются в зависимости от номинального тока. «Квантум Энерго» изготавливает КРУ как с нижним, так и со средним выкатным элементом.
+            +e.col
+              p Комплектные распределительные устройства (КРУ) предназначены для работы в электрических установках трехфазного переменного тока частотой 50 и 60 Гц напряжением 6 и 10 кВ для системы с изолированной или заземленной через дугогасящий реактор нейтралью, в условиях умеренного (У) климата и категории размещения 3 по ГОСТ 15150.
+          +e.row
+            +e.href.common__href(href="#") Больше о нас
+          
+      
+      +b.SECTION.video
+        +b.orbits._group4
+          svg(viewbox="0 0 879.5 1769.5").orbit
+            path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+     d="M0.500,1767.498 C0.500,1767.498 372.828,1563.952 556.022,1309.354 C739.216,1054.755 736.781,864.239 703.930,724.609 C671.079,584.979 636.060,443.621 663.500,324.499 C693.511,194.213 797.444,76.211 877.810,1.219", id="orbit7")
+            circle(r="5.5", fill="rgb(7, 94, 157)")
+              animateMotion(dur="20s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+                mpath(xlink:href="#orbit7")
+          svg(viewbox="0 0 722.5 1719.5").orbit.orbit_elem4
+            path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+     d="M0.788,1716.775 C0.788,1716.775 373.143,1448.630 465.111,1129.463 C518.666,943.602 499.272,833.902 461.365,667.884 C423.458,501.866 424.248,416.889 447.500,327.499 C476.989,214.133 616.412,84.497 720.875,0.492", id="orbit8")
+            circle(r="5.5", fill="rgb(245, 130, 31)")
+              animateMotion(dur="20s", repeatCount="indefinite", calcMode="linear")
+                mpath(xlink:href="#orbit8")
+        +b.orbits._group5
+          svg(viewbox="0 0 597 1455.5").orbit.orbit_elem6
+            path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+     d="M141.438,1453.739 C135.942,1398.445 105.660,1271.265 52.201,1138.156 C7.258,1005.049 -52.326,720.843 116.500,456.499 C287.447,188.834 590.937,1.408 590.937,1.408", id="orbit9")
+            circle(r="4.5", fill="rgb(7, 94, 157)")
+              animateMotion(dur="20s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+                mpath(xlink:href="#orbit9")
+          svg(viewbox="0 0 348 1586.5").orbit.orbit_elem5
+            path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+     d="M230.500,1585.499 C230.500,1230.151 4.000,958.088 4.000,618.500 C4.000,270.444 340.931,1.258 340.931,1.258", id="orbit10")
+            circle(r="4.5", fill="rgb(245, 130, 31)")
+              animateMotion(dur="20s", repeatCount="indefinite", calcMode="linear")
+                mpath(xlink:href="#orbit10")
+        .container
+          +e.over
+            +e.img(src="img/video.jpg")
+            +e.play(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+              span Посмотрите видео о нашей компании
+              
+      
+      +b.SECTION.features
+        +b.orbits._group2
+          svg(viewbox="0 0 218 901.5").orbit.orbit_elem1
+            path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+     d="M1.500,0.499 C156.945,168.722 249.373,310.377 189.500,550.499 C160.161,668.165 83.274,792.271 1.972,900.261", id="orbit3")
+            circle(r="4.5", fill="rgb(245, 130, 31)")
+              animateMotion(dur="15s", repeatCount="indefinite", calcMode="linear")
+                mpath(xlink:href="#orbit3")
+          svg(viewbox="0 0 240 973.5").orbit.orbit_elem2
+            path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+     d="M2.125,1.461 C46.435,57.461 89.208,105.022 124.500,155.500 C250.878,336.258 329.273,656.969 1.687,972.251", id="orbit4")
+            circle(r="4.5", fill="rgb(7, 94, 157)")
+              animateMotion(dur="12s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+                mpath(xlink:href="#orbit4")
+      
+        .container
+          p.common__title Наши преимущества
+          +e.UL.list
+            +e.item
+              +e.icon(src="img/feat1.png")
+              +e.P.title Надежность
+              +e.P.text Усиленный корпус (высокая силовая нагрузка). Выдерживает тряску, соответствующую нормальной работе экскаватора, и крен. Гарантия на окраску 25 лет
+            +e.item
+              +e.icon(src="img/feat2.png")
+              +e.P.title Безопасность
+              +e.P.text Шкафы снабжены встроенными электромагнитными и механическими блокировками. Высокие локализационные показатели высоковольтного отсека
+            +e.item
+              +e.icon(src="img/feat3.png")
+              +e.P.title Универсальность
+              +e.P.text Возможность дистанционного и местного управления. Предусмотрена конструкция как с трансформаторами напряжения, так и без них
+            +e.item
+              +e.icon(src="img/feat4.png")
+              +e.P.title Удобство эксплуатации
+              +e.P.text Автономная работа системы и легкость доступа для обслуживания. Предусмотрено двухстороннее обслуживание
+              
+              
+      +b.SECTION.objects
+        .container
+          p.common__title Выполненные объекты
+          +e.UL.list
+            +e.item._large
+              +e.imgover(href="#")
+                +e.img.fit(src="img/obj1.jpg")
+              +e.content
+                +e.P.date 28 августа 2018
+                +e.href(href="#") 
+                  span.js-shave(data-height="72") Модульные распределительные шкафы для АО «СХЗ» Модульные распределительные шкафы для АО «СХЗ»
+                +e.P.about.js-shave(data-height="120") ООО «Модуль» — ведущий производитель блочных комплектных трансформаторных подстанций, распределительных пунктов и поставок оборудования для встроенных ТП и РП. И еще чуть-чуть текста, чтобы понять, что обрезка работает. И может быть даже еще маленько, а то не режется.
+            +e.item
+              +e.imgover(href="#")
+                +e.img.fit(src="img/obj2.jpg")
+              +e.content
+                +e.P.date 14 августа 2018
+                +e.href(href="#") 
+                  span.js-shave(data-height="73") 2КТПН-БТВК для ОАО «СургутНефтегаз»
+            +e.item
+              +e.imgover(href="#")
+                +e.img.fit(src="img/obj3.jpg")
+              +e.content
+                +e.P.date 10 июня 2018
+                +e.href(href="#") 
+                  span.js-shave(data-height="73") КТПН-1000 для буровой компании г. Москвы
+            +e.item
+              +e.imgover(href="#")
+                +e.img.fit(src="img/obj4.jpg")
+              +e.content
+                +e.P.date 5 мая 2018
+                +e.href(href="#") 
+                  span.js-shave(data-height="73") 2КТПН-БТКК-400/6/0,4 УХЛ1 для ООО ТД «ЭЛЕКТРОТЕХМОНТАЖ» и еще чуть-чуть текста, чтобы понять, что обрезка работает
+          +e.tocat.common__href(href="#") Все объекты
+          
+      +b.SECTION.serts
+        +b.orbits._group3
+          svg(viewbox="0 0 148 917.5").orbit.orbit_elem3
+            path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+     d="M1.900,1.169 C53.534,97.478 116.850,222.163 138.881,436.760 C157.310,616.280 82.732,787.718 2.029,915.737 ", id="orbit5")
+            circle(r="4.5", fill="rgb(245, 130, 31)")
+              animateMotion(dur="15s", repeatCount="indefinite", calcMode="linear")
+                mpath(xlink:href="#orbit5")
+          svg(viewbox="0 0 185 942.5").orbit.orbit_elem2
+            path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+     d="M1.591,1.263 C7.123,11.840 13.140,22.665 19.686,33.722 C80.928,137.158 285.042,468.561 106.497,800.553 C78.770,852.109 42.155,898.910 1.743,940.623", id="orbit6")
+            circle(r="4.5", fill="rgb(7, 94, 157)")
+              animateMotion(dur="12s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+                mpath(xlink:href="#orbit6")
+        .container
+          p.common__title Сертификаты
+          +e.over
+            +e.car.swiper-container.js-serts
+              .swiper-wrapper
+                .swiper-slide
+                  +e.imgover(href="#", data-fancybox, data-caption="Сертификат на соответствие ГОСТ Р", data-src="img/sert1.jpg")
+                    +e.img.fit(src="img/sert1.jpg")
+                  +e.P.name Сертификат на соответствие ГОСТ Р
+                .swiper-slide
+                  +e.imgover(href="#", data-fancybox, data-caption="Сертификат ABB", data-src="img/sert2.jpg")
+                    +e.img.fit(src="img/sert2.jpg")
+                  +e.P.name Сертификат ABB
+                .swiper-slide
+                  +e.imgover(href="#", data-fancybox, data-caption="Сертификат на комплектные трансформаторные подстанции КТП", data-src="img/sert3.jpg")
+                    +e.img.fit(src="img/sert3.jpg")
+                  +e.P.name Сертификат на комплектные трансформаторные подстанции КТП
+                .swiper-slide
+                  +e.imgover(href="#", data-fancybox, data-caption="Сертификат на низковольтные комплектные устройства НКУ", data-src="img/sert4.jpg")
+                    +e.img.fit(src="img/sert4.jpg")
+                  +e.P.name Сертификат на низковольтные комплектные устройства НКУ
+            .swiper-buttons
+              .swiper-button-prev
+              .swiper-button-next
+          +e.tocat.common__href(href="#") Все сертификаты
+          
+      
+      +b.SECTION.geography
+        .container
+          p.common__title.common__title_white География поставок
+          +e.info
+            +e.info-col
+              +e.P.info-title более
+              +e.P.info-text 
+                span 100 
+                | городов
+            +e.info-col
+              +e.P.info-title более
+              +e.P.info-text 
+                span 12000 
+                | объектов
+          +e.imgover
+            +e.img(src="img/map.png")
+    include layout/__footer
+    include layout/__scripts

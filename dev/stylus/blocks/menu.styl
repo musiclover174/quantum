@@ -1,0 +1,101 @@
+.menu
+  @media $PortraitMax
+    pos fixed
+    display flex
+    align-items center
+    justify-content flex-start
+    w 100%
+    t 0
+    l -100%
+    opacity 0
+    padding 70px 30px
+    z-index 13
+    overflow auto
+    h 100%
+    transition .7s opacity
+  &__list
+    display flex
+    @media $PortraitMax
+      flex-direction column
+  &__item
+    &_mobile
+      dn()
+      @media $PortraitMedium
+        db()
+    & + &
+      ml 18px
+      @media $desktopMax
+        ml 14px
+      @media $desktopMin
+        ml 20px
+      @media $LandscapeMin
+        ml 10px
+      @media $PortraitMax
+        ml 0
+        mt 35px
+  &__href
+    ib()
+    pos relative
+    color #abb4b4
+    fontify 13px 700 13px
+    letter-spacing .1em
+    text-transform uppercase
+    transition .7s color
+    white-space nowrap
+    @media $desktopMax
+      letter-spacing .06em
+    @media $LandscapeMedium
+      text-transform inherit
+      fontify 14px 400 14px
+      letter-spacing 0
+    @media $PortraitMax
+      fontify 22px 700 24px
+    @media $PortraitMin
+      fontify 18px 700 22px
+    &:after
+      content ""
+      pos absolute
+      b -8px
+      l 50%
+      w 0
+      h 2px
+      bgc $blue
+      transition .7s width, .7s left
+      @media $LandscapeMedium
+        b -2px
+        h 1px
+      @media $PortraitMax
+        dn()
+    &:hover,
+    &.active
+      color $blue
+      &:after
+        l 0
+        w 100%
+  &_bot
+    & ^[0]__item + ^[0]__item
+      ml 35px
+    & ^[0]__href
+      color $dark
+      fontify 14px 700 14px
+      letter-spacing .08em
+      @media $desktopMax
+        letter-spacing .06em
+      &:after
+        h 1px
+        b -1px
+        bgc alpha($dark, .2)
+        w 100%
+        l 0
+      &.active,
+      &:hover
+        color $blue
+        &:after
+          l 50%
+          w 0
+  &__feedback
+    @media $PortraitMedium
+      db()
+      fontify 22px 700 54px
+    @media $PortraitMin
+      fontify 18px 700 44px

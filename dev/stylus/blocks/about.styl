@@ -1,0 +1,62 @@
+.about
+  mb 105px
+  @media $LandscapeMin
+    mb 70px
+  .container
+    pos relative
+    z-index1
+    &:before
+      content "Компания"
+      pos absolute
+      z-index -1
+      l 51%
+      t -15px
+      color whitesmoke
+      fontify 199px 700 194px
+      text-transform uppercase
+      letter-spacing .1em
+      transform translateX(-50%)
+      @media $desktopMax
+        fontify 153px 700 148px
+      @media $LandscapeMax
+        fontify 123px 700 128px
+      @media $LandscapeMedium
+        dn()
+  &__row
+    ml -30px
+    w calc(100% + 30px)
+    mt -5px
+    @media $LandscapeMin
+      mt 0
+      w 100%
+      ml 0
+    & + &
+      mt 33px
+    &:last-child
+      pl 100px
+      @media $desktopMedium
+        pl 70px
+      @media $LandscapeMin
+        pl 0
+  &__col
+    ib()
+    w calc(50% - 30px)
+    @media $LandscapeMin
+      w 100%
+    & + &
+      ml 30px
+      @media $LandscapeMax
+        ml 55px
+      @media $LandscapeMin
+        ml 0
+        mt 20px
+    &:first-child
+      pl 100px
+      @media $desktopMedium
+        pl 71px
+      @media $LandscapeMin
+        pl 0
+    > *
+      max-width 395px
+      @media $LandscapeMin
+        max-width inherit

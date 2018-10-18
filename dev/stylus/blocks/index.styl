@@ -1,0 +1,431 @@
+.banner
+  bgc $gblue
+  pt 49px
+  pb 145px
+  @media $PortraitMedium
+    pt 20px
+  &__count
+    pos absolute
+    z-index 2
+    cursor default
+    l 0
+    t 96px
+    color alpha($dark, .3)
+    fontify 10px 300 10px
+    @media $LandscapeMax
+      dn()
+    span
+      ib()
+      mr 4px
+      color $dark
+      fontify 25px 300 25px
+      mt -2px
+  .swiper-slide
+    pos relative
+    z-index 1
+    display flex
+    align-items flex-start
+    pl 96px
+    @media $LandscapeMax
+      pl 0
+    &-active
+      & ^[0]
+        &__img
+          opacity 1
+          r 0
+          //transition-delay .8s
+        &__name
+          opacity 1
+          l 0
+          //transition-delay 1.2s
+        &__href
+          opacity 1
+          l 0
+          //transition-delay 1.4s
+  &__carover
+    pos relative
+    .swiper-buttons
+      @media $LandscapeMax
+        pos absolute
+        h 52px
+        w 127px
+        t 28px
+        l 0
+      @media $PortraitMin
+        w 117px
+    .swiper-button-prev
+      @media $desktopMax
+        l 0
+    .swiper-button-next
+      @media $desktopMax
+        r 0
+    .swiper-button-prev, 
+    .swiper-button-next
+      bgc alpha(white, .4)
+      border-color transparent
+      &:before
+        opacity .4
+        transition .7s opacity, .7s background
+      &:hover
+        bgc alpha(#7ca8cb, .4)
+        &:before
+          opacity 1
+          background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOBAMAAADd6iHDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEX///////////////////////////////////////8V2MxSAAAACXRSTlMAZ2gt/f5vbmZgGN1IAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADVJREFUCNdjYAADIQYYYHYVgLNTA+FM9lCEcCmq8EwYCERmwhU0wLVFYBFMjUBYDBdk6ABiADq2ErVHYCDOAAAAAElFTkSuQmCC") no-repeat center
+  &__content
+    pos relative
+    z-index 1
+    width 574px
+    mr 30px
+    pt 91px
+    pb 6px
+    @media $LandscapeMax
+      pt 123px
+    @media $LandscapeMin
+      w 70%
+    @media $PortraitMedium
+      w 100%
+      pt 100px
+  &__name
+    color $dark
+    font-family $slab
+    fontify 55px 700 60px
+    pos relative
+    opacity 1
+    mb 32px
+    l -20px
+    letter-spacing: -.01em;
+    transition .7s opacity, .7s left
+    @media $desktopMax
+      fontify 40px 700 45px
+    @media $LandscapeMax
+      mb 42px
+    @media $LandscapeMin
+      fontify 30px 700 35px
+      mb 30px
+    @media $PortraitMedium
+      fontify 23px 700 30px
+      mb 25px
+  &__href
+    pos relative
+    ml 3px
+    opacity 1
+    l -20px
+    transition .7s opacity, .7s left
+  &__side
+    w calc(100% - 604px)
+    display flex
+    justify-content flex-end
+    align-items center
+    align-self stretch
+    pr 28px
+    @media $LandscapeMax
+      pr 0
+    @media $LandscapeMin
+      w 30%
+    @media $PortraitMedium
+      dn()
+  &__img
+    pos relative
+    opacity 1
+    r -20px
+    transition .7s opacity, .7s right
+    @media $LandscapeMedium
+      r 0
+      max-width 40vw
+      h auto
+    
+.industry
+  pos relative
+  z-index 1
+  padding 33px 0 34px
+  mt -85px
+  mb 93px
+  @media $desktopMedium
+    margin -85px 74px 93px
+  @media $LandscapeMax
+    ml 44px
+    mr 44px
+    padding 50px 0 12px
+  @media $LandscapeMin
+    mb 60px
+  & > .container
+    pos relative
+    z-index 1
+    &:before
+      content ""
+      pos absolute
+      l -40px
+      t -33px
+      b -34px
+      r -40px
+      bgc $grey
+      border-radius 5px
+      z-index -1
+      @media $desktopMedium
+        l -44px
+        r -44px
+      @media $LandscapeMax
+        t -50px
+        b -12px
+  &__list
+    display flex
+    align-items flex-start
+    justify-content space-between
+    @media $LandscapeMax
+      flex-wrap wrap
+      justify-content flex-start
+  &__item
+    w 200px
+    @media $desktopMax
+      pr 20px
+    @media $LandscapeMax
+      w calc(100% / 3)
+      mb 32px
+    @media $LandscapeMin
+      w 50%
+    @media $PortraitMedium
+      w 100%
+  &__iconover
+    h 40px
+    display flex
+    align-items flex-end
+    mb 12px
+  &__icon
+    max-width 100%
+    max-height 100%
+  &__href
+    color $dark
+    fontify 11px 600 19px
+    text-transform uppercase
+    letter-spacing .06em
+    border-bottom 1px solid alpha($dark, .2)
+    transition .7s border
+    @media $LandscapeMax
+      fontify 15px 600 22px
+    @media $PortraitMax
+      fontify 13px 600 18px
+    &:hover
+      border-color transparent
+      
+
+.video
+  pos relative
+  mb 90px
+  @media $LandscapeMin
+    mb 70px
+  &__over
+    pos relative
+    bgc #171d28
+    border-radius 5px
+    overflow hidden
+    h 583px
+    @media $LandscapeMin
+      h 380px
+    @media $PortraitMedium
+      h 300px
+    &:before
+      content ""
+      pos absolute
+      l 50%
+      t 50%
+      size 350px
+      opacity .6
+      transform translate(-50%, -50%)
+      background: radial-gradient(ellipse at center, rgba(52,135,216,1) 11%,rgba(63,143,219,1) 25%,rgba(108,173,228,0) 70%,rgba(125,185,232,0) 100%);
+  &__img
+    imgCentering()
+    opacity .33
+  &__play
+    pos absolute
+    cursor pointer
+    z-index 1
+    l 50%
+    t 50%
+    mt -24px
+    ml -24px
+    size 48px
+    border 2px solid alpha(white, .2)
+    border-radius 50%
+    box-shadow 0px 0px 0px 81px rgba(255,255,255,0.05)
+    span
+      pos absolute
+      l calc(100% + 32px)
+      t 50%
+      c white
+      font-family $slab
+      fontify 20px 700 26px
+      width 200px
+      text-align left
+      transform translateY(-50%)
+      @media $PortraitMedium
+        t calc(100% + 12px)
+        l 50%
+        transform translateX(-50%)
+        text-align center
+    &:before
+      content ""
+      pos absolute
+      border 1px solid rgba(255,255,255,0.05)
+      size 212px
+      l 50%
+      t 50%
+      transform translate(-50%, -50%)
+      border-radius 50%
+      transition 1.5s width, 1.5s height, 1.5s border-color
+    &:after
+      content ""
+      pos absolute
+      l 20px
+      t 17px
+      size 7px 10px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAMAAABPErQ/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEX////////////////////////////////////////////////////////////////////lEOhHAAAAEHRSTlMApg/gO/yBBMYi8VxbxSHfZoiy/AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAuSURBVAjXY2BkYgADAWYWCC3AysYOpgUEODghtAAXN5TmAdO8fEjq+CH6oOYAAFSiAhxY9LopAAAAAElFTkSuQmCC") no-repeat center 
+    &:hover:before
+      size 400px
+      border-color rgba(255,255,255,0)
+      
+      
+      
+.geography
+  bgc #3488da
+  pt 92px
+  overflow hidden
+  @media $LandscapeMin
+    pt 70px
+  @media $PortraitMedium
+    pt 40px
+  .container
+    pos relative
+  .common__title
+    z-index 1
+  &__info
+    pos absolute
+    z-index 1
+    df()
+    w calc(50% - 15px)
+    r 0
+    t -25px
+    bgc #5da0e1
+    border-radius 5px
+    box-shadow 0 3px 31px 1px rgba(1, 21, 33, 0.07)
+    padding 20px 0 18px
+    @media $desktopMedium
+      w 50%
+    @media $LandscapeMax
+      w 55%
+    @media $LandscapeMedium
+      pos relative
+      w 100%
+      mt 30px
+      t 0
+    @media $PortraitMedium
+      flex-direction column
+      padding 0
+    &-col
+      w 50%
+      padding 0 40px
+      @media $desktopMedium
+        padding 0 30px
+      @media $PortraitMedium
+        w 100%
+        padding 15px 20px
+      & + &
+        border-left 1px solid alpha(#dfe7eb, .2)
+        @media $PortraitMedium
+          border-left 0
+          border-top 1px solid alpha(#dfe7eb, .2)
+    &-title
+      c white
+      fontify 16px 300 24px
+      mb -2px
+    &-text
+      color white
+      font-family $slab
+      fontify 18px 700 30px
+      span
+        font-size 30px
+  &__imgover
+    pos relative
+    z-index 0
+    mt -120px
+    mb -25px
+    @media $LandscapeMedium
+      mt -80px
+    @media $PortraitMedium
+      mt 0
+      mb 0
+  &__img
+    pos relative
+    l 50%
+    max-width 120%
+    transform translateX(-50%)
+    
+.orbits
+  pos absolute
+  @media $desktopMedium
+    dn()
+  &_group1
+    t -38px
+    l 0
+    size 264px 1178px
+    @media $lDesktopMedium
+      l -100px
+    @media $lDesktopSmall
+      t 150px
+      l -150px
+  &_group2
+    r -50px
+    t 0
+    size 264px 1178px
+    transform scale(-1)
+    @media $lDesktopMedium
+      r -150px
+    @media $lDesktopMedium
+      r -215px
+  &_group3
+    l -50px
+    t 0
+    size 177px 1129px
+    @media $lDesktopMedium
+      l -100px
+    @media $lDesktopMedium
+      l -150px
+  &_group4
+    z-index -2
+    size 878px 1810px
+    r -50px
+    b 380px
+    @media $lDesktopMedium
+      r -200px
+    @media $lDesktopSmall
+      dn()
+  &_group5
+    z-index -2
+    size 594px 1541px
+    l 14%
+    t 300px
+    @media $lDesktopMax
+      l 4%
+    @media $lDesktopMedium
+      l 0
+    @media $lDesktopSmall
+      dn()
+    
+.orbit
+  pos absolute
+  &_elem1
+    t 134px
+    l -2px
+  &_elem2
+    t 0
+    l -2px
+  &_elem3
+    t 210px
+  &_elem4
+    t 100px
+    r -2px
+  &_elem5
+    l 88px
+    t 20px
+    size 341px 1584px
+  &_elem6
+    size 591px 1452px

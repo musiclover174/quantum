@@ -1,0 +1,203 @@
+.news
+  &__list
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    pos relative
+    ml -60px
+    w calc(100% + 60px)
+    @media $lDesktopMedium
+      ml -40px
+      w calc(100% + 40px)
+  &__elem
+    w calc(50% - 60px)
+    ml 60px
+    mb 65px
+    display flex
+    flex-direction column
+    align-items flex-start
+    justify-content flex-start
+    @media $lDesktopMedium
+      ml 40px
+      w calc(50% - 40px)
+      mb 45px
+    @media $LandscapeMax
+      w calc(100% - 40px)
+    &-side
+      w 100%
+    &-imgover
+      db()
+      pt 52%
+      w 0
+      bgc black
+      pos relative
+      overflow hidden
+      transition .7s width
+      transition-delay 0s !important
+      &.visible
+        w 100%
+    &-img
+      position absolute
+      left 0
+      top 50%
+      opacity .8
+      will-change transform
+      transition 7s transform, .7s opacity
+      transform translate(0, -50%) scale(1)
+      &:hover
+        opacity 1
+        transform translate(0, -50%) scale(1.08)
+    &-content
+      w 100%
+      mt 20px
+      pos relative
+      opacity 1
+      b 0
+      transition-delay .8s
+      transition .7s opacity, .7s bottom
+      @media $lDesktopMedium
+        mt 7px
+    &-date
+      color #888
+      fontify 15px 400 17px
+      mt 18px
+      @media $lDesktopMedium
+        fontify 13px 400 21px
+        mt 12px
+    &-href
+      color black
+      fontify 48px 700 54px
+      border-bottom 1px solid alpha(black, 1)
+      transition .5s border, .5s color
+      @media $lDesktopMedium
+        fontify 31px 700 37px
+      @media $desktopMedium
+        fontify 26px 700 30px
+      span
+        pos relative
+        t 11px
+        @media $lDesktopMedium
+          t 7px
+        @media $desktopMedium
+          t 5px
+      &:hover
+        border-color transparent
+        color $red
+    &-text
+      fontify 18px 400 26px
+      mt 44px
+      max-width 720px
+      @media $lDesktopMedium
+        fontify 15px 400 23px
+        mt 31px
+      @media $desktopMedium
+        mt 20px
+  &__inner
+    pos fixed
+    h 0
+    bottom 0
+    l 0 
+    r 0
+    overflow hidden
+    bgc white
+    transition .7s height
+    &-content
+      max-width 1000px
+      margin 0 auto
+      padding 155px 20px 80px
+      pos relative
+      t -20px
+      opacity 0
+      transition .7s opacity, .7s top
+      @media $lDesktopSmall
+        max-width 800px
+    &-title
+      color black
+      fontify 48px 700 52px
+      @media $lDesktopSmall
+        fontify 39px 700 43px
+    &-date
+      color #888
+      fontify 15px 400 17px
+      mt 15px
+      mb 38px
+      @media $lDesktopSmall
+        fontify 13px 400 15px
+    &-prevtext
+      color black
+      fontify 24px 400 32px
+      mb 20px
+      @media $lDesktopSmall
+        fontify 21px 400 29px
+  &__close
+    pos fixed
+    size 31px
+    t 50px
+    r 50px
+    cursor pointer
+    background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAMAAAAocOYLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAATlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////EHIBLAAAAGHRSTlMA33d+1XZ4gHBxeX9yu7S1c3p9e3V0fNK4QMTLAAAAAWJLR0QZ7G61iAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAJRJREFUKM99z9sOgkAMhOFBBFREFo/z/k9qNsCe6GxvevH9SVM0J+hpz+jYSx54AXoZDLz6pYKNVRDYDhK2goyBG/M3x5zLYOS9vJcGBqeByTEQvAeS16DCPphqDEx81LjlzK7GDosOPEMHK8tgZxFENoOUjSDnQ1ByETwPDLz4jvwx/gmBzSFQvAVfyT5waBz0LL8/BtgKUiA9unoAAAAASUVORK5CYII=") no-repeat center
+    opacity 0
+    transition .7s background, .7s transform, .7s opacity
+    &:hover
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAMAAAAocOYLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAPFBMVEXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCX///+EedRrAAAAEnRSTlMA33d44nZ5enu6uLV1fHR9c94H4sMKAAAAAWJLR0QTDLtclgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAJ9JREFUKM990NkWgyAMRdGrlqFWrM3/f2yhdQDJDU+udbYSg2EEP9MDTiaavbhsxNP8e3UkwB9f1oG/LtZAqOfqQWjHvoMgt99uQZcLCFZGXlSw8gVIPgDNfxDLzjl4WhmYZbZylJdEK7t8RbQysDCQ9tEISOfkKkiynM8KqLMC2lxAsjKw1qDPDdByBd6yqvvYAcs7SDQXEDFs4Gf7fAE2DwfIwtjgNQAAAABJRU5ErkJggg==") no-repeat center
+      transition-delay 0s !important
+      transform rotate(360deg)
+  &__tonext,
+  &__toprev 
+    pos absolute
+    t 50%
+    size 80px 170px
+    mt -85px
+    z-index 10
+    cursor pointer
+    bgc transparent
+    outline none
+    background url('../i/arleft.png') no-repeat center
+    transition .7s opacity
+    @media $LandscapeMax
+      dn()
+    &:before
+      content ""
+      pos absolute
+      t 70px
+      size 12px 22px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///9tVJtUAAAAI3RSTlMA5X2Dhn6MAXmTc/6Ya58DZf2lX/yrBlqvVPm1CE6wmpSC2hLDrO0AAAABYktHRCS0BvmZAAAACXBIWXMAAAsSAAALEgHS3X78AAAAYElEQVQY023PRxKAIAwFUCwogl0EBcXC/e/ojvyFWf03k0lhWc6oiliCeKxqkogNSKoW1Kl+II3TDFr0akhWb6Dd+YN0Oo8Iv21WB/M3GpfiOVJd6VAR75TxuQfffjnlD/61Bbzz6VU7AAAAAElFTkSuQmCC") no-repeat center
+      transition .7s background
+    &:hover:before
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCX///8lgV07AAAAI3RSTlMA5X2Dhn6MAXmTc/6Ya58DZf2lX/yrBlqvVPm1CE6wmpSC2hLDrO0AAAABYktHRCS0BvmZAAAACXBIWXMAAAsSAAALEgHS3X78AAAAYElEQVQY023PRxKAIAwFUCwogl0EBcXC/e/ojvyFWf03k0lhWc6oiliCeKxqkogNSKoW1Kl+II3TDFr0akhWb6Dd+YN0Oo8Iv21WB/M3GpfiOVJd6VAR75TxuQfffjnlD/61Bbzz6VU7AAAAAElFTkSuQmCC") no-repeat center
+    &.disabled
+      opacity .1 !important
+  &__toprev
+    transform scaleX(-1)
+    l 0
+    opacity 0
+    transition .7s opacity
+    &:before
+      l 47px
+  &__tonext
+    r 0
+    opacity 0
+    transition .7s opacity
+    &:before
+      l 48px
+      
+html.newsopen
+  overflow hidden
+  .news__toprev,
+  .news__tonext,
+  .news__close
+    opacity 1
+    transition-delay 1s
+  .news__inner
+    height 100%
+    overflow auto
+    @media $desktopMedium
+      z-index 12
+  .news__inner-content
+    opacity 1
+    t 0px
+    transition-delay 1.3s
+    @media $desktopMedium
+      padding 40px 20px
+    @media $LandscapeMax
+      pt 100px

@@ -1,0 +1,104 @@
+.objects
+  bgc $gblue
+  pt 92px
+  pb 70px
+  mb 93px
+  @media $LandscapeMin
+    pt 60px
+    pb 70px
+    mb 60px
+  .container
+    pos relative
+  &__list
+    df()
+    flex-wrap wrap
+    ml -30px
+    w calc(100% + 30px)
+    pl 70px
+    pt 15px
+    @media $LandscapeMin
+      w calc(100% + 40px)
+      ml -40px
+    @media $desktopMedium
+      pl 0
+  &__item
+    w calc(100% / 3 - 30px)
+    ml 30px
+    mb 30px
+    bgc white
+    border-radius 5px
+    overflow hidden
+    @media $LandscapeMedium
+      w calc(50% - 30px)
+    @media $LandscapeMin
+      w calc(50% - 40px)
+    @media $PortraitMedium
+      w calc(100% - 30px)
+    @media $LandscapeMediumMin
+      &_large
+        w 100%
+        h 296px
+        df()
+        & ^[0]__imgover
+          w 46%
+        & ^[0]__date
+          mb 2px
+        & ^[0]__href
+          fontify 24px 600 36px
+        & ^[0]__content
+          w 50%
+          max-width 475px
+          padding 38px 30px 0 43px
+  &__imgover
+    db()
+    pos relative
+    pt 57%
+    overflow hidden
+  &__img
+    pos absolute
+    l 0
+    t 0
+    r 0
+    b 0
+    object-fit contain
+    font-family 'object-fit: contain;'
+    min-width 100%
+    transition .7s opacity
+    &:hover
+      opacity .7
+  &__content
+    padding 28px 30px 30px 30px
+    min-height 151px
+  &__date
+    c alpha($dark, .4)
+    fontify 12px 600 14px
+    mb 6px
+    text-transform uppercase
+    letter-spacing .06em
+  &__href
+    c $dark
+    fontify 16px 600 24px
+    border-bottom 1px solid alpha($dark, .2)
+    transition .7s border
+    &:hover
+      border-color transparent
+    & > span
+      pos relative
+      t 4px
+  &__about
+    c $dark
+    fontify 16px 300 24px
+    mt 19px
+    @media $LandscapeMedium
+      dn()
+  &__tocat
+    pos absolute
+    t 24px
+    r 0
+    @media $LandscapeMax
+      t 18px
+    @media $LandscapeMin
+      pos relative
+      t 0
+      r auto
+      mt 10px

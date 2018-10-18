@@ -1,0 +1,30 @@
+include ../bemto/bemto.pug
+
++b.HEADER.header
+  +e.logo(href="#")
+    +e.logo-img(src="img/logo.png", alt="")
+  +e.content
+    +b.NAV.menu
+      +e.UL.list
+        +e.item
+          +e.href.active(href="#") О компании
+        +e.item
+          +e.href(href="#") Каталог
+        +e.item
+          +e.href(href="#") Опросные листы
+        +e.item
+          +e.href(href="#") Выполненные проекты
+        +e.item
+          +e.href(href="#") Контакты
+        +e.item._mobile
+          +e.feedback.btn(type="button", data-fancybox, data-src="#feedback") Заказать обратный звонок
+    +e.ASIDE.side
+      +e.side-row
+        +e.mail(href="mailto:sails@k-en.ru") sails@k-en.ru
+      +e.side-row
+        +e.phone(href="tel:+73512252436") +7 (351) 225-24-36
+      +e.side-row
+        +e.feedback.btn(type="button", data-fancybox, data-src="#feedback") Заказать обратный звонок
+  +e.button.js-burger(type="button", aria-label="открыть мобильное меню")
+    +e.SPAN.button-meat
+  +e.SPAN.shadow

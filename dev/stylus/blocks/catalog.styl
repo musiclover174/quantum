@@ -1,0 +1,128 @@
+.catalog
+  mb 54px
+  @media $LandscapeMin
+    mb 70px
+  .container
+    pos relative
+  &__over
+    df()
+    flex-wrap wrap
+    ml -30px
+    w calc(100% + 30px)
+    @media $LandscapeMin
+      w calc(100% + 40px)
+      ml -40px
+  &__imgover
+    dfv(center)
+    w 100%
+    pos relative
+    z-index 1
+    h 328px
+    justify-content flex-end
+    pb 33px
+    mb 22px
+    transform translateZ(0)
+    transform-style preserve-3d
+    backface-visibility hidden
+    @media $PortraitMax
+      h 230px
+    @media $PortraitMedium
+      pb 0
+      h auto
+  &__img
+    pos relative
+    z-index 1
+    max-width 90%
+    max-height 100%
+    transform translateZ(100px)
+    transition .7s filter
+  &__border
+    pos absolute
+    w 100%
+    pt calc(100% - 4px)
+    b 0
+    l 0
+    border 2px solid #e8ebf5
+    border-radius 5px
+    overflow hidden
+    transition .7s border-color
+    &:before
+      content ""
+      pos absolute
+      h 0
+      w 100%
+      l 0
+      b 0
+      bgc #075e9d
+      background linear-gradient(to bottom, #0198ff 0%,#0198ff 10%,#075e9d 100%)
+      transition .7s height
+    @media $PortraitMedium
+      dn()
+  &__elem
+    w calc(25% - 30px)
+    ml 30px
+    text-align center
+    mb 34px
+    &:hover ^[0]__border
+      border-color transparent
+      &:before
+        h 100%
+    @media $LandscapeMedium
+      w calc(100% / 3 - 30px)
+    @media $LandscapeMin
+      w calc(50% - 40px)
+      ml 40px
+    @media $PortraitMedium
+      w calc(100% - 40px)
+      mb 80px
+    &_more
+      & ^[0]__name
+        letter-spacing 0
+      & ^[0]__imgover
+        pb 21%
+        @media $PortraitMedium
+          pb 0
+      &:hover ^[0]__img
+        filter brightness(0) invert(1)
+        @media $PortraitMedium
+          filter none
+  &__name
+    c $blue
+    fontify 25px 700 24px
+    border-bottom 1px solid alpha($blue, .4)
+    letter-spacing .06em
+    transition .7s border
+    @media $PortraitMax
+      fontify 20px 700 22px
+    &:hover
+      border-color transparent
+    span
+      pos relative
+      t 4px
+  &__desc
+    color $dark
+    fontify 16px 300 24px
+    mt 20px
+    text-align center
+  &__tocat
+    pos absolute
+    t 24px
+    r 0
+    @media $LandscapeMax
+      t 18px
+    @media $LandscapeMin
+      pos relative
+      t 0
+      r auto
+  &__hrefs
+    mt 20px
+    &-item
+      & + &
+        mt 4px
+  &__href
+    color $dark
+    fontify 16px 300 20px
+    border-bottom 1px solid alpha($dark, .2)
+    transition .7s border-color
+    &:hover
+      border-color transparent

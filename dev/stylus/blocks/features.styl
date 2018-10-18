@@ -1,0 +1,74 @@
+.features
+  pos relative
+  mb 86px
+  @media $LandscapeMin
+    mb 57px
+  @media $PortraitMedium
+    mb 30px
+  &__list
+    df()
+    flex-wrap wrap
+    justify-content space-between
+    padding 8px 0 0 139px
+    @media $desktopMedium
+      pl 0
+  &__item
+    w calc(50% - 35px)
+    mb 30px
+    pos relative
+    z-index 1
+    padding 18px 20px 13px 111px
+    min-height 177px
+    @media $LandscapeMin
+      min-height inherit
+      w 100%
+    @media $PortraitMedium
+      padding 0
+      mb 50px
+    &:nth-child(2)
+      t 51px
+      @media $LandscapeMin
+        t 0
+    &:nth-child(4)
+      t 51px
+      @media $LandscapeMin
+        t 0
+    &:before
+      content ""
+      pos absolute
+      z-index -1
+      l 40px
+      t 0
+      b 0
+      w calc(100% - 40px)
+      background-color #f6f7fb
+      border-radius 5px
+      max-width 177px
+      transition .7s max-width
+      @media $LandscapeMin
+        max-width 100%
+      @media $PortraitMedium
+        dn()
+    &:hover:before
+      max-width 100%
+  &__icon
+    pos absolute
+    l 0
+    t 18px
+    @media $PortraitMedium
+      pos relative
+      t 0
+      mb 15px
+  &__title
+    color $blue
+    fontify 14px 600 18px
+    letter-spacing .06em
+    text-transform uppercase
+    max-width 315px
+    mb 8px
+  &__text
+    c alpha($dark, .6)
+    fontify 16px 300 24px
+    max-width 315px
+    @media $LandscapeMin
+      max-width inherit

@@ -1,0 +1,20 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    section.content
+      section.container
+        h1 Очень большой заголовок
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim / 
+        .text
+          ul
+            li
+              a(href="index") Главная
+            li
+              a(href="text") Типовая текстовая
+    include layout/__footer
+    include layout/__scripts

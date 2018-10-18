@@ -1,0 +1,115 @@
+.footer
+  margin 0 50px
+  bgc whitesmoke
+  @media $desktopMax
+    margin 0 30px
+  @media $desktopMedium
+    margin 0
+  &__top
+    display flex
+    justify-content space-between
+    align-items center
+    padding 48px 0 37px
+    @media $LandscapeMax
+      dn()
+  &__logo
+    ml -23px
+    mr 20px
+    @media $desktopMin
+      ml 0
+    &-img
+      @media $LandscapeMax
+        w 120px
+  &__side
+    display flex
+    flex-direction column
+    align-items flex-end
+    pt 12px
+    @media $desktopMin
+      flex-direction column-reverse
+  &__info
+    display flex
+    align-items flex-start
+    mt 30px
+    @media $desktopMin
+      mt 0
+      mb 30px
+  &__addr
+    color $dark
+    fontify 16px 300 16px
+    pos relative
+    ml 21px
+    &:before
+      content ""
+      pos absolute
+      l -21px
+      t -1px
+      size 12px 17px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAARCAMAAADe472QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA3lBMVEUHXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///9Vq5GxAAAASXRSTlMABm7H9BvPrz4KCQfSdpLysciyExeRP8n58BUWC/XlHO1BhLgjjkVrtIjkbNdPS9rhDAjbRp99rBToMSHsHl/KA3gBvyfq4ESl8dJHewAAAAFiS0dESYcF5HwAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAChSURBVAjXPYzVEoJQFEUXiAJeBbG7Uezubv//ixRwXA875pzZgCQHFCUgS3wJhlRND2tqKAgiEsUjGhHIKsIwTUMQk7E0jHgiqaZIZ8jq5PJQyFFUKOmUK1CpopewatQbzWbDpmXRdpA63XJHwukh+gN/ejgSkB5P3DydzV1b2K4uV959vdnCbn/wv4+nM/GLn7neesO++BXuj+eLP8u3Zx+9Vg1fiGBsNAAAAABJRU5ErkJggg==") no-repeat center
+  &__phone
+    pos relative
+    ml 52px
+    color $dark
+    fontify 16px 600 16px
+    &:before
+      content ""
+      pos absolute
+      l -25px
+      t 1px
+      size 15px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA/1BMVEUHXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3////+Mo1NAAAAVHRSTlMADwYK1LFLYNstNae4FFbEMNYHMwJV0BXYE9oYq0FTutwIzhoo00CpTcoZBLlzKTSyeXQc1wGsDJZ3CW6Uw14eC7bGfcvR3QUiUgMWvpUQEtlwG+Cpd4oEAAAAAWJLR0RU5AOIpQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAL9JREFUCNc1j2tXAWEUhZ+5yCX3XjFoKhpyHWQUKYrcKib+/38x88b+std+1jl7rQ0oKqDpgQukgiE97HvkMhrzLJ5Qkqkw6StB5joLOQOSea1QTN1g3sKdd3NfKsODVaH6SK1Oo9nyC9q6sDt0ezz1Hdk8iDg6Rv6Zl6HMhTQjeB2jvb17cTKV1PkwUT67YjbvtyXIflUYjReDpX0CK2sN9Q3YlpDg++d36/vOVf83iD93uMeoxTlr25ofXO/tCHGbFAItoVPRAAAAAElFTkSuQmCC") no-repeat center
+  &__mail
+    color $dark
+    fontify 16px 300 16px
+    pos relative
+    ml 55px
+    border-bottom 1px dotted alpha($blue, .3)
+    transition .7s border
+    &:hover
+      border-color transparent
+    &:before
+      content ""
+      pos absolute
+      l -25px
+      t 3px
+      size 15px 10px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAMAAABcxfTLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEUsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqwsdqz///9fwpB2AAAAFnRSTlMABr/xkM3rM4jtGU3pmixtGLUciZHucfruIwAAAAFiS0dEFwvWmI8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAABSSURBVAjXRc5JFoAgEEPBMMsgggL3P6r9aMHs6q8CIdVYU1JAG+vAc9Yc8CEmDi7F4DEADkSQyDNMfqZwTi4jXxlsH/CveOhaNu/6QLS+//QmXlpUBJQcqCH2AAAAAElFTkSuQmCC") no-repeat center
+  &__bottom
+    display flex
+    justify-content space-between
+    align-items center
+    padding 32px 0
+    border-top 1px solid alpha(#c8cad4, .6)
+    @media $LandscapeMax
+      border 0
+    @media $PortraitMedium
+      flex-direction column
+      align-items flex-start
+  &__copy
+    color alpha($dark, .5)
+    fontify 16px 400 20px
+  &__dextra
+    pos relative
+    color $dark
+    font-family Verdana, Geneva, sans-serif
+    fontify 9px 400 14px
+    text-transform uppercase
+    letter-spacing 0.18em
+    @media $PortraitMedium
+      l 84px
+      mt 20px
+    span
+      pos absolute
+      t 3px
+      r calc(100% + 10px)
+      bgc $blue
+      color white
+      font-family Arial
+      fontify 12px 900 21px
+      text-transform uppercase
+      letter-spacing 0.1em
+      border-radius 3px
+      padding 0 6px
+      transition 0.7s background
+    &:hover span
+      background-color #cbdcea
