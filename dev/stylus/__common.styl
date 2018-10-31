@@ -46,6 +46,7 @@ body
       pr 0
     
 .content
+  min-height calc(100vh - 437px)
   padding 0 50px
   @media $desktopMax
     padding 0 30px
@@ -53,6 +54,7 @@ body
     padding 0
   @media $LandscapeMax
     pt 149px
+    min-height calc(100vh - 92px)
   @media $LandscapeMedium
     pt 100px
   h1:not([class])
@@ -169,13 +171,14 @@ input:-ms-input-placeholder
   color alpha(white, .5)
   
 body:not(.index) .content
+  overflow hidden
   pt 65px
   pb 90px
   @media $LandscapeMax
     pt 215px
   @media $LandscapeMedium
     pt 145px
-  
+    
 div[class\^="table-scroller"]
   overflow auto
   pos relative
@@ -517,95 +520,47 @@ textarea.warning
 .hidden-block
   display none
   
-.tippy-tooltip.light-theme
-  bgc white
-  box-shadow 0 6px 32px rgba(0, 0, 0, 0.21)
-  fontif 14px 400 18px
-  color $dark
-  padding 15px 19px
-  .tippy-backdrop
-    bgc white
-    color $dark
-  .tippy-arrow
-    border-top-color white
-    
-.tomato
-  position absolute
-  size 81px
-  background url('../i/tomato.png') no-repeat center
-  @media $desktopMedium
-    dn()
+.orbit
+  pos absolute
   &_elem1
-    r 118px
-    b 41px
-  &_elem2
-    l -570px
-    t -100px
-  &_elem3
-    l 100px
-    b 100px
-    @media $desktopMax
-      dn()
-  &_fixed
-    pos fixed
-    l 70px
-    t 20vh
-
-.veg
-  position absolute
-  size 152px 184px
-  background url('../i/veg.png') no-repeat center
-  @media $desktopMedium
-    dn()
-  &_elem1
-    r -622px
-    t -96px
+    t 134px
+    l -2px
   &_elem2
     t 0
-    l -860px
-    @media $lDesktopMedium
-      l -660px
+    l -2px
   &_elem3
-    t -31px
-    l 60px
-  &_fixed
-    pos fixed
-    r 70px
-    t 40vh
-    
-.pasta
-  position absolute
-  size 98px
-  background url('../i/pasta1.png') no-repeat center
-  @media $desktopMedium
-    dn()
-  &_elem1
-    r 311px
-    b -53px
-  &_elem2
-    background url('../i/pasta2.png') no-repeat center
-    size 85px 110px
-    l -828px
-    b -483px
-  &_elem3
-    background url('../i/pasta2.png') no-repeat center
-    size 85px 110px
-    r -750px
-    t 120px
-    @media $lDesktopMedium
-      r -550px
+    t 210px
   &_elem4
-    background url('../i/pasta2.png') no-repeat center
-    size 85px 110px
-    r -844px
-    t -90px
-    transform scaleX(-1)
+    t 100px
+    r -2px
   &_elem5
-    background url('../i/pasta2.png') no-repeat center
-    size 85px 110px
-    l -830px
-    t 78px
-  &_fixed
-    pos fixed
-    l 180px
-    t 80vh
+    l 88px
+    t 20px
+    size 341px 1584px
+  &_elem6
+    size 591px 1452px
+  &_elem7,
+  &_elem8
+    l 57%
+    width 100vw
+    min-width 1920px
+    transform translateX(-50%)
+  &_elem7
+    size 2397px 255px
+    t 28px
+    z-index 2
+    @media $LandscapeMax
+      t 178px
+    @media $LandscapeMedium
+      t 128px
+    @media $PortraitMedium
+      t 98px
+  &_elem8
+    size 2230px 394px
+    t -108px
+    @media $LandscapeMax
+      t 42px
+    @media $LandscapeMedium
+      t -8px
+    @media $PortraitMedium
+      t -88px
