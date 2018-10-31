@@ -38,6 +38,12 @@ body
     max-width calc(100% - 60px)
     ml 30px
     mr 30px
+  &_text
+    pr 235px
+    @media $desktopMax
+      pr 105px
+    @media $desktopMin
+      pr 0
     
 .content
   padding 0 50px
@@ -50,51 +56,70 @@ body
   @media $LandscapeMedium
     pt 100px
   h1:not([class])
-    color black
-    fontify 72px 700 76px
-    margin 63px 0 35px
-  h2:not([class])
-    color black
-    fontify 48px 700 54px
-    margin 63px 0 28px
-  h3:not([class])
     color $dark
-    fontify 36px 700 42px
-    margin 65px 0 38px
+    font-family $slab
+    fontify 48px 700 53px
+    margin 43px 0 35px
+    @media $desktopMin
+      fontify 40px 700 45px
+    @media $PortraitMedium
+      fontify 29px 700 36px
+    @media $PortraitMin
+      fontify 21px 700 27px
+  h2:not([class])
+    color $dark
+    font-family $slab
+    fontify 36px 700 43px
+    margin 43px 0 28px
+    @media $desktopMin
+      fontify 30px 700 37px
+    @media $PortraitMedium
+      fontify 26px 700 32px
+    @media $PortraitMin
+      fontify 19px 700 24px
+  h3:not([class]),
   h4:not([class])
     color $dark
-    fontify 24px 700 34px
-    margin 43px 0 16px
+    font-family $slab
+    fontify 30px 700 37px
+    margin 43px 0 31px
+    @media $desktopMin
+      fontify 24px 700 28px
+    @media $PortraitMedium
+      fontify 22px 700 26px
+    @media $PortraitMin
+      fontify 18px 700 23px
   img:not([class])
-    margin 5px 0
+    margin 16px 0
     max-width 100%
   ul:not([class])
     list-style  none
-    margin  23px 0
+    margin  18px 0
   ul:not([class]) li
     pl 30px
     pos relative
-    fontify 20px 400 27px
+    fontify 16px 300 24px
   ul:not([class]) li + li
-    mt 25px
-  ul:not([class]) li:before
+    mt 16px
+  ul:not([class]) > li:before
     content ""
     pos absolute
     l 0
-    t 13px
-    size 14px 1px
-    bgc $green
+    t 7px
+    size 7px
+    border-radius 50%
+    bgc $blue
   ol:not([class])
     list-style none
-    margin 23px 0
+    margin 18px 0 30px
     counter-reset myCounter
   ol:not([class]) li
     pl 30px
     pos relative
-    fontify 18px 400 24px
+    fontify 16px 300 24px
   ol:not([class]) li + li
-    mt 24px
-  ol:not([class]) li:before
+    mt 16px
+  ol:not([class]) > li:before
     counter-increment myCounter
     content counter(myCounter)"."	
     pos absolute
@@ -102,17 +127,15 @@ body
     t 0
     w 30px
     pr 9px
-    color $green
-    fontify 18px 400 24px
-    @media $lDesktopMedium
-      fontify 15px 400 23px
+    color $blue
+    fontify 16px 700 24px
   p:not([class])
     color $dark
     fontify 16px 300 24px
-    margin 21px 0
+    margin 18px 0
   a:not([class])
-    color $red
-    border-bottom 1px solid currentColor
+    color $blue
+    border-bottom 1px solid alpha($blue, .4)
     transition .5s border
     &:hover
       border-color transparent
@@ -123,19 +146,20 @@ body
     margin-bottom 0 !important
 
   table
-    margin 30px 0
-    border 2px solid $green
-  table th
-    text-align left
-    padding 16px 24px
-    color black
-    fontify 15px 400 21px
-    border 1px solid #f0f3e1
-  table td
-    padding 18px 24px
-    color $dark
-    fontify 15px 400 21px
-    border 1px solid #f0f3e1
+    th
+      text-align left
+      padding 18px 24px
+      color white
+      fontify 16px 300 24px
+      bgc $blue
+    td
+      padding 14px 24px
+      color $dark
+      fontify 16px 300 24px
+      border 1px solid #e8ebf5
+    tbody
+      border 2px solid #e8ebf5
+      border-top 0
 
 input::-webkit-input-placeholder
   color alpha(white, .5)
@@ -144,9 +168,20 @@ input::-moz-placeholder
 input:-ms-input-placeholder
   color alpha(white, .5)
   
+body:not(.index) .content
+  pt 65px
+  pb 90px
+  @media $LandscapeMax
+    pt 215px
+  @media $LandscapeMedium
+    pt 145px
+  
 div[class\^="table-scroller"]
   overflow auto
   pos relative
+  pl 1px
+  &:not(:last-child)
+    mb 36px
   @media $desktopMax
     w 100%
 
@@ -457,25 +492,23 @@ div[class\^="table-scroller"]
     opacity 1
       
 .breadcrumbs
-  mb 55px
-  color $grey
-  pos relative
-  mt -25px
-  pl 13px
+  mb 20px
+  color $dark
+  opacity .5
   &__href
-    color $grey
-    fontify 14px 400 18px
-    border-bottom 1px solid $grey
+    color $dark
+    fontify 14px 300 18px
+    border-bottom 1px solid
     transition .5s border
     &:hover
       border-color transparent
-    @media $lDesktopMedium
-      fontify 12px 400 18px
   &__delim
-    padding 0 11px
-    fontify 14px 400 18px
-    @media $lDesktopMedium
-      fontify 12px 400 18px
+    ib()
+    margin 5px 11px 0
+    size 10px 7px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHBAMAAADDgsFQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEWpqampqampqampqampqampqampqampqan////E4sCnAAAAB3RSTlMAMwzachxzI53qQgAAAAFiS0dECIbelXoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAkSURBVAjXY2BgYBAAYgYmExDJEOzAUA4EhWB2AkjcDCwuwAAAU6MEIlVESYMAAAAASUVORK5CYII=') no-repeat center
+  & + h1:not([class])
+    mt 0
 
 input.warning,
 textarea.warning

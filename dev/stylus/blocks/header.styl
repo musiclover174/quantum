@@ -198,8 +198,20 @@
       & ^[-1]-meat
         opacity 1
         transition .4s opacity .6s
-        
-        
+     
+body:not(.index) .header:before
+  content ""
+  pos absolute
+  h 100%
+  z-index -1
+  t 0
+  w 100vw
+  l 50%
+  transform translateX(-50%)
+  box-shadow 0 3px 17.9px 3.2px rgba(3, 36, 59, 0.07)
+  @media $LandscapeMax
+    dn()
+  
 @keyframes burger-hover
   0%
     w 100%
