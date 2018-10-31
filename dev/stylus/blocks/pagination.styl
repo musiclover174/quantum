@@ -2,97 +2,75 @@
   display flex
   justify-content center
   align-items flex-start
-  &__prev
-    ib()
-    pos relative
-    color black
-    fontify 18px 400 18px
-    mr 50px
-    mt 6px
-    border-bottom 1px solid black
-    transition .5s left, .5s opacity, .5s border, .5s color
-    &:not(.disabled):hover
-      border-color transparent
-      color $red
-      &:before
-        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCX///96AcaUAAAAG3RSTlMAgOUBjYIDmXgEpP5qBrD8X7P5VLQHpXaPf9ow85dSAAAAAWJLR0QcnARBBwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEVJREFUCNdjYAABRiZmEMXMIs0KotnYpTlANCcXNw+I5uXjFwCrExQSBtMMIjCGKEyKgVMMohisXRzCYpaQZoSwGCSlmAFwQQJVo5L3WQAAAABJRU5ErkJggg==") no-repeat center
-    @media $lDesktopMedium
-      fontify 15px 400 15px
-    @media $LandscapeMax
-      fontify 0px 400 15px
-      mr 30px
-    &:before
-      content ""
-      pos absolute
-      l -16px
-      t 3px
-      size 8px 12px
-      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8OKbV/AAAAG3RSTlMAgOUBjYIDmXgEpP5qBrD8X7P5VLQHpXaPf9ow85dSAAAAAWJLR0QcnARBBwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEVJREFUCNdjYAABRiZmEMXMIs0KotnYpTlANCcXNw+I5uXjFwCrExQSBtMMIjCGKEyKgVMMohisXRzCYpaQZoSwGCSlmAFwQQJVo5L3WQAAAABJRU5ErkJggg==") no-repeat center
-      transition .7s background
-    @media $desktopMin
-      mr 30px
-    &.disabled
-      opacity .25
-      border-bottom transparent
+  mt 25px
+  &__prev,
   &__next
     ib()
     pos relative
-    color black
-    fontify 18px 400 18px
-    ml 50px
-    mt 6px
-    border-bottom 1px solid black
-    transition .5s left, .5s opacity, .5s border, .5s color
-    &:not(.disabled):hover
-      border-color transparent
-      color $red
-      &:before
-        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCXrHCX///96AcaUAAAAG3RSTlMAgOUBjYIDmXgEpP5qBrD8X7P5VLQHpXaPf9ow85dSAAAAAWJLR0QcnARBBwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEVJREFUCNdjYAABRiZmEMXMIs0KotnYpTlANCcXNw+I5uXjFwCrExQSBtMMIjCGKEyKgVMMohisXRzCYpaQZoSwGCSlmAFwQQJVo5L3WQAAAABJRU5ErkJggg==") no-repeat center
-    @media $lDesktopMedium
-      fontify 15px 400 15px
-    @media $LandscapeMax
-      fontify 0px 400 15px
-      ml 30px
+    size 40px
+    border-radius 50%
+    border 1px solid alpha(#7ca8cb, .4)
+    bgc transparent
+    outline none
+    transition .7s opacity, .7s background, .7s border
+    @media $PortraitMin
+      size 30px
     &:before
       content ""
       pos absolute
-      r -16px
-      t 3px
-      size 8px 12px
-      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAMAAABoQAyvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8OKbV/AAAAG3RSTlMAgOUBjYIDmXgEpP5qBrD8X7P5VLQHpXaPf9ow85dSAAAAAWJLR0QcnARBBwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEVJREFUCNdjYAABRiZmEMXMIs0KotnYpTlANCcXNw+I5uXjFwCrExQSBtMMIjCGKEyKgVMMohisXRzCYpaQZoSwGCSlmAFwQQJVo5L3WQAAAABJRU5ErkJggg==") no-repeat center
-      transform scaleX(-1)
+      l 16px
+      t 14px
+      size 7px 10px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKBAMAAACK4lk+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUHXp0HXp0HXp0HXp0HXp0HXp0HXp3////pVd7qAAAAB3RSTlMAZmct/f5ub6q6TgAAAAFiS0dEBxZhiOsAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAmSURBVAjXY2BUYGBgMAkCEmyhIGYqnAkmUgNBDAGgEiCDgRHIAAB0TQSHjsHj/QAAAABJRU5ErkJggg==') no-repeat center
       transition .7s background
+      @media $PortraitMin
+        l 11px
+        t 9px
+    &:not(.disabled):hover
+      bgc $blue
+      border-color transparent
+      &:before
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKBAMAAACK4lk+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEX///////////////////////////////8pK8DIAAAAB3RSTlMAZmct/f5ub6q6TgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAmSURBVAjXY2BUYGBgMAkCEmyhIGYqnAkmUgNBDAGgEiCDgRHIAAB0TQSHjsHj/QAAAABJRU5ErkJggg==')
     &.disabled
-      opacity .25
+      opacity .2
       border-bottom transparent
+  &__prev
+    transform scaleX(-1)
+    mr 23px
+    @media $PortraitMin
+      mr 15px
+  &__next
+    ml 23px
+    @media $PortraitMin
+      ml 15px
   &__list
     display flex
   &__item
     text-align center
     color $dark
-    fontify 24px 700 19px
-    @media $lDesktopMedium
-      fontify 21px 700 19px
-    & + &
-      ml 28px
-      @media $desktopMin
-        ml 18px
+    fontify 16px 600 40px
+    size 40px
+    display flex
+    align-items center
+    justify-content center
+    border-radius 5px
+    @media $PortraitMin
+      size 30px
+      line-height 30px
+    &.active
+      background-color #f6f7fb
     &-href
       pos relative
-      display inline-block
-      vertical-align middle
-      color black
-      fontify 24px 700 19px
+      color $dark
+      fontify 16px 600 16px
       transition .7s border
-      border-bottom 1px solid alpha(black, 1)
-      transition .5s color, .5s border
-      @media $lDesktopMedium
-        fontify 21px 700 19px
+      border-bottom 1px solid lightgrey
+      transition .7s color, .7s border
       &:not(a):after
         border-color transparent
       &:hover
-        color $red
+        color $blue
         border-color transparent
       ^[-1].active &
-        color $red
+        color $blue
         border-color transparent

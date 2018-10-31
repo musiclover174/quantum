@@ -1,5 +1,5 @@
 nav.pagination
-  span.pagination__prev.disabled Предыдущая
+  span(aria-label="Предыдущая").pagination__prev.disabled
   ul.pagination__list
     li.pagination__item.active
       span.pagination__item-href 1
@@ -9,5 +9,5 @@ nav.pagination
       a(href="#").pagination__item-href 3
     li.pagination__item ...
     li.pagination__item
-      a(href="#").pagination__item-href 5
-  a(href="#").pagination__next Следующая
+      a(href="#").pagination__item-href 99
+  a(href="#", aria-label="Следующая").pagination__next

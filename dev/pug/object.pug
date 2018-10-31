@@ -1,0 +1,51 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      section.container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim 
+        h1 КСО-203-8В-630Ч для ОАО «Суксунский оптико-механический завод»
+        p.objects__inner-date 10 июня 2018
+      section.container.container_text
+        .text
+          p ОАО «Суксунский оптико-механический завод» - российский разработчик и производитель современных и эффективных средств индивидуальной защиты (СИЗ) и СИЗОД (СИЗ органов дыхания) для защиты рабочих во вредных и опасных условиях труда.
+          p Выполнена поставка камеры КСО-203-8В-630Ч в комплексе монтажом и пуско-наладочными работами.
+          img(src="img/text2.jpg")
+          p Первая состоит из распределительного устройства 10кВ на базе ячеек КСО-203 и распределительного устройства 0,4кВ на базе шкафов ШНВ, ШНЛ, ШНС, обеспечивая электроснабжением производственные мощности завода 2КТПВ-1600/10/0,4 У3.
+        a(href="#").backtoblack Вернуться к списку проектов
+      section.container
+        p.objects__inner-title Другие объекты
+        ul.objects__list.objects__list_others
+          li.objects__item
+            a(href="#").objects__imgover
+              img(src="img/obj2.jpg").objects__img.fit
+            .objects__content
+              p.objects__date 14 августа 2018
+              a(href="#").objects__href
+                span 2КТПН-БТВК для ОАО «СургутНефтегаз»
+              p.objects__about Краткое описание новости в несколько строк, чтобы показать межстрочное расстояние и объем текста
+          li.objects__item
+            a(href="#").objects__imgover
+              img(src="img/obj3.jpg").objects__img.fit
+            .objects__content
+              p.objects__date 10 июня 2018
+              a(href="#").objects__href
+                span КТПН-1000 для буровой компании г. Москвы
+              p.objects__about Краткое описание новости в несколько строк, чтобы показать межстрочное расстояние и объем текста
+          li.objects__item
+            a(href="#").objects__imgover
+              img(src="img/obj4.jpg").objects__img.fit
+            .objects__content
+              p.objects__date 5 мая 2018
+              a(href="#").objects__href
+                span 2КТПН-БТКК-400/6/0,4 УХЛ1 для ООО ТД «ЭЛЕКТРОТЕХМОНТАЖ» и еще чуть-чуть текста, чтобы понять, что обрезка работает
+              p.objects__about Краткое описание новости в несколько строк, чтобы показать межстрочное расстояние и объем текста
+    include layout/__footer
+    include layout/__scripts

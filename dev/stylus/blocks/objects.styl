@@ -7,6 +7,40 @@
     pt 60px
     pb 70px
     mb 60px
+  &_inner
+    bgc transparent
+    pos relative
+    mt -65px
+    pb 0
+    mb 0
+    pt 65px
+    @media $LandscapeMax
+      mt -68px
+    @media $LandscapeMedium
+      mt -50px
+    &:before
+      content ""
+      pos absolute
+      bgc $gblue
+      l 0
+      t 0
+      w 100%
+      h 713px
+      @media $desktopMax
+        h 686px
+      @media $desktopMin
+        h 670px
+      @media $LandscapeMedium
+        dn()
+    & ^[0]__list
+      pl 0
+      pt 0
+      mt 45px
+    & ^[0]__content
+      padding 0
+      pt 28px
+      @media $LandscapeMedium
+        min-height inherit
   .container
     pos relative
   &__list
@@ -21,6 +55,20 @@
       ml -40px
     @media $desktopMedium
       pl 0
+    &_others
+      pl 0
+      pt 0
+      mb -40px
+      & ^[0]__content
+        padding 0
+        pt 28px
+        @media $LandscapeMedium
+          min-height inherit
+      & ^[0]__item:nth-child(3)
+        @media $LandscapeMedium
+          dn()
+        @media $PortraitMedium
+          db()
   &__item
     w calc(100% / 3 - 30px)
     ml 30px
@@ -32,8 +80,10 @@
       w calc(50% - 30px)
     @media $LandscapeMin
       w calc(50% - 40px)
+      ml 40px
+      mb 40px
     @media $PortraitMedium
-      w calc(100% - 30px)
+      w calc(100% - 40px)
     @media $LandscapeMediumMin
       &_large
         w 100%
@@ -102,3 +152,16 @@
       t 0
       r auto
       mt 10px
+  &__inner
+    &-date
+      color alpha($dark, .4)
+      fontify 14px 600 24px
+      text-transform uppercase
+      letter-spacing .07em
+      mb 30px
+    &-title
+      color $dark
+      font-family $slab
+      fontify 30px 700 37px
+      mt 95px
+      mb 35px

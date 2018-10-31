@@ -4,7 +4,7 @@ html
     include layout/__head
   body
     include layout/__header
-    section.content
+    main.content
       section.container.container_text
         section.breadcrumbs
           a(href="#").breadcrumbs__href Главная
@@ -17,6 +17,10 @@ html
             li
               a(href="text") Типовая текстовая
             li
-              a(href="404") Типовая текстовая
+              a(href="404") 404
+            li
+              a(href="objects") Выполненные объекты
+            li
+              a(href="object") Выполненные объекты - 1 объект
     include layout/__footer
     include layout/__scripts

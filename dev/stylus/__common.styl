@@ -517,6 +517,27 @@ input.warning,
 textarea.warning
   border-color $red
 
+.backtoblack
+  ib()
+  pos relative
+  l 37px
+  mt 53px
+  color $dark
+  fontify 16px 600 16px
+  border-bottom 1px solid alpha($dark, .2)
+  transition .7s border
+  &:hover
+    border-color transparent
+  &:before
+    content ""
+    pos absolute
+    l -37px
+    t -4px
+    size 22px
+    border 1px solid alpha($blue, 0.2)
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKBAMAAACK4lk+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEUHXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///96mfWvAAAACHRSTlMAZmf+/SxuaEA4JB0AAAABYktHRAiG3pV6AAAACXBIWXMAAAsSAAALEgHS3X78AAAALElEQVQI12NgYBBiYGBgNAlgYFA2Y2BgMk5gYCgGMsA8BkYQl0HYDKYEqBgAZOsD/MQ87v8AAAAASUVORK5CYII=') no-repeat center
+    border-radius 50%
+  
 .hidden-block
   display none
   
@@ -542,8 +563,6 @@ textarea.warning
   &_elem7,
   &_elem8
     l 57%
-    width 100vw
-    min-width 1920px
     transform translateX(-50%)
   &_elem7
     size 2397px 255px
@@ -564,3 +583,15 @@ textarea.warning
       t -8px
     @media $PortraitMedium
       t -88px
+  &_elem9
+    size 1822px 823px
+    l -53px
+    t -56px
+    @media $LandscapeMedium
+      dn()
+  &_elem10
+    size 1955px 800px
+    l -156px
+    t -125px
+    @media $LandscapeMedium
+      dn()
