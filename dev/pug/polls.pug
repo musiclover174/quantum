@@ -1,0 +1,107 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      section.container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim 
+        h1 Опросные листы
+        p.polls__subtitle Представляем Вашему вниманию опросные листы для заказа шкафов (ячеек) КРУ 6(10) кВ от различных заводов-изготовителей выполненные в программе  Microsoft Word. 
+        +b.SECTION.polls
+          +e.UL.list
+            +e.item
+              +e.P.name 2КВЭ6
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (219 Kb)
+            +e.item
+              +e.P.name НКУ
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (345 Kb)
+            +e.item
+              +e.P.name БКТП
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (124 Kb)
+            +e.item
+              +e.P.name ПКУ
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (102 Kb)
+            +e.item
+              +e.P.name БМЗ
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (34 Kb)
+            +e.item
+              +e.P.name РУ 6 (10)
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (245 Kb)
+            +e.item
+              +e.P.name КРУ
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (240 Kb)
+            +e.item
+              +e.P.name Трансформатор
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (103 Kb)
+            +e.item
+              +e.P.name КСО
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (222 Kb)
+            +e.item
+              +e.P.name УКРМО4
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (212 Kb)
+            +e.item
+              +e.P.name КТПВ
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (124 Kb)
+            +e.item
+              +e.P.name ЩО70
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (451 Kb)
+            +e.item
+              +e.P.name КТПН
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (212 Kb)
+            +e.item
+              +e.P.name ЯКНО
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (219 Kb)
+            +e.item
+              +e.P.name МТП
+              +e.download(href="#") Скачать
+              +e.SPAN.weight (219 Kb)
+          +e.ASIDE.aside
+            +e.FORM.form
+              +e.P.form-title Оставить заявку на&nbsp;расчет
+              +e.P.form-hint Поля со «*» обязательны для заполнения.
+              .common__row.polls__timrow
+                .common__col
+                  input(data-req="req").common__input
+                  label.common__placeholder Имя*
+                .common__col
+                  input(data-req="req").common__input.js-phone
+                  label.common__placeholder Телефон*
+              .common__row
+                .common__col.common__col_wide
+                  textarea.common__textarea.common__textarea_short
+                  label.common__placeholder Ваше сообщение
+              .common__row
+                .common__fileover
+                  input(type="file", name="", data-req="").common__file#file1.js-common-fileinput
+                  label(for="file1", data-default="Прикрепить файл").common__filename.js-common-file Прикрепить файл
+                  button(type="button").common__filedelete.js-common-filedelete
+              .common__row
+                .fakecheckbox
+                  input(type="checkbox", value="", name="agreement1", checked)#agreement.fakecheckbox__truecheck
+                  label(for="agreement1").fakecheckbox__label Согласен на обработку 
+                    a(href="#") персональных данных
+              p.popup__warntext Некоторые поля заполнены неправильно или заполнены с&nbspошибкой.
+              .common__row
+                button(type="submit").common__sbm.popup__sbm Заказать звонок
+    include layout/__footer
+    include layout/__scripts

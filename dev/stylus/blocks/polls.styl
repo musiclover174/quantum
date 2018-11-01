@@ -1,0 +1,130 @@
+.polls
+  df()
+  @media $LandscapeMax
+    flex-direction column
+  &__subtitle
+    max-width 680px
+    fontify 16px 300 24px
+    mb 42px
+  &__list
+    display flex
+    flex-wrap wrap
+    align-items flex-start
+  &__item
+    position relative
+    w 50%
+    pr 30px
+    pl 70px
+    mb 32px
+    @media $PortraitMax
+      pr 15px
+    @media $PortraitMedium
+      w 100%
+      pr 0
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 0
+      size 26px 31px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAfCAMAAADOWS1PAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEX///8HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///+sA4BaAAAAIHRSTlMAAE2+80yE+W4Sb3fyw8QoshvqjrgXav7YMWv3BRFO9M2YQY4AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAoElEQVQoz9XT2Q7CIBAF0EvphkLdrdbt/v9XOhW3Ao0x8cV5IeEQmEkuADKdM6hcFwpAyWSVQMGqNnIC6q1MXTGD5gQISakpNSxNigwtSKRIyf5ncs/W3Dg1X1z4/224cWp++NaLZnPrB4xosXzMHtGK640s27aNaMe9ly6iA493iRJFepH0hjkU6noRyiS9pwF5SWbeS08468vwm9xE4Qo2AyGtY6Rj1wAAAABJRU5ErkJggg==') no-repeat center
+  &__name
+    color $dark
+    fontify 16px 700 24px
+    mb 12px
+    ml -23px
+    pt 4px
+  &__download
+    pos relative
+    ib()
+    mr 12px
+    color $blue
+    fontify 13px 600 13px
+    border-bottom 1px solid alpha($blue, .8)
+    transition .7s border
+    letter-spacing .1em
+    text-transform uppercase
+    &:hover
+      border-color transparent
+    &:before
+      content ""
+      pos absolute
+      l -25px
+      t -2px
+      size 14px 17px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAMAAADaFm2tAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEX///8HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3////zOPZ3AAAAFXRSTlMAAAcktukr6rfxGRjzrbUbJ+8l8iYufoQyAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAGBJREFUCNe1zVkOgCAMBNBpQcEFN5z7X9UWjDdwfpqXtFNAPGQbwK/U4AzaqXEYyTFF7cwcyMTstAuzxWTb3qDxlaB1am4iMXF2uxauKNyW9lP2jQXHyS/nAblK7ajllgc9+QZjt8SkrAAAAABJRU5ErkJggg==') no-repeat center
+  &__weight
+    ib()
+    color alpha(#222, .5)
+    fontify 16px 300 24px
+    mt -6px
+  &__aside
+    @media $LandscapeMax
+      w 100%
+  &__timrow
+    dfv()
+    @media $LandscapeMax
+      flex-direction row
+    @media $PortraitMedium
+      flex-direction column
+    .common__col
+      w 100%
+      & + .common__col
+        mt 43px
+        @media $LandscapeMax
+          mt 0
+        @media $PortraitMedium
+          mt 43px
+      @media $LandscapeMax
+        w calc(50% - 20px)
+      @media $PortraitMedium
+        w 100%
+  &__form
+    w 400px
+    ml 10px
+    flex-shrink 0
+    bgc $blue
+    border-radius 5px
+    padding 43px 50px
+    color white
+    @media $LandscapeMax
+      w 100%
+      ml 0
+      mt 30px
+    @media $PortraitMedium
+      ml -30px
+      w calc(100% + 60px)
+      padding 23px 30px
+      border-radius 0
+      mb -90px
+    &-title
+      font-family $slab
+      fontify 24px 700 31px
+      mb 26px
+    &-hint
+      fontify 16px 300 24px
+      mb 37px
+      letter-spacing -.01em
+    .common__row + .common__row
+      mt 43px
+    .common__textarea
+      h 56px
+    .common__fileover
+      mt -9px
+    .fakecheckbox__label
+      a
+        color alpha(white, .5)
+        border-bottom 1px solid alpha(white, .2)
+    .fakecheckbox
+      mt -20px
+    .popup__warntext
+      opacity 1
+      dn()
+      w 100%
+      mt 20px
+    &.warning .popup__warntext
+      db()
+    .popup__sbm
+      mt 25px
+      w 100%
+      text-align center

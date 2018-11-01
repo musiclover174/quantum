@@ -381,9 +381,6 @@ div[class\^="table-scroller"]
   &__fileover
     w 100%
     pos relative
-    pt 14px
-    pb 14px
-    border-bottom 1px solid white
     transition .5s border
     &.warning
       border-color #ed1c24
@@ -396,12 +393,18 @@ div[class\^="table-scroller"]
     l 0
     t 0
     opacity 0
+    &[data-req]:after
+      content "*"
+      pos absolute
+      r -11px
+      fontify 23px 400 14px
+      t -3px
     &name
       ib()
       pos relative
       l 26px
       cursor pointer
-      color white
+      color alpha(white, .5)
       fontify 14px 700 14px
       letter-spacing .1em
       text-transform uppercase
@@ -409,15 +412,14 @@ div[class\^="table-scroller"]
       transition .5s border
       @media $lDesktopSmall
         font-size 12px
+      &.choosed
+        color white
+        text-transform none
+        letter-spacing 0
+        font-weight 300
       &.choosed,
       &:hover
         border-color transparent
-      &:after
-        content "*"
-        pos absolute
-        r -11px
-        fontify 23px 400 14px
-        t -3px
       &:before
         content ""
         pos absolute
