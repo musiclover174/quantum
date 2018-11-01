@@ -291,38 +291,49 @@ div[class\^="table-scroller"]
         w 0
   &__input
     w 100%
-    h 48px
+    h 36px
     border 0
-    border-bottom 1px solid white
+    border-bottom 1px solid alpha(white, .3)
     bgc transparent
-    color black
+    color white
     font-family $os
-    font-size 17px
-    line-height 400
-    transition .5s border
-    @media $lDesktopSmall
-      font-size 14px
+    font-size 16px
+    line-height 300
+    transition .7s border
+    &.notempty, 
+    &:focus
+      border-bottom 1px solid alpha(white, 1)
     &:focus + ^[0]__placeholder,
     &.notempty + ^[0]__placeholder
-      dn()
+      t -17px
+      line-height 18px
   &__textarea
     w 100%
-    h 116px
+    h 76px
     overflow hidden
     resize none
-    padding 11px 18px
-    border 2px solid #ececec
+    padding 0 0 11px
+    border 0
+    border-bottom 1px solid alpha(white, .3)
     bgc transparent
-    color $dark
+    color white
     font-family $os
-    fontify 14px 400 24px
-    transition .5s border
+    fontify 16px 300 22px
+    transition .7s border
+    & + ^[0]__placeholder
+      line-height 22px
+    &.notempty, 
+    &:focus
+      border-bottom 1px solid alpha(white, 1)
     &:focus + ^[0]__placeholder,
     &.notempty + ^[0]__placeholder
-      dn()
+      t -17px
+      line-height 18px
   &__sbm
+    cursor pointer
     font-family $os
     mt 5px
+    border-radius 5px
   &__select
     h 36px
     bgc #fff
@@ -337,30 +348,27 @@ div[class\^="table-scroller"]
     z-index -1
     l 0 
     t 0
-    color white
-    fontify 14px 700 50px
+    color alpha(white, .5)
+    fontify 13px 400 35px
     letter-spacing .1em
     text-transform uppercase
     text-overflow ellipsis
     white-space nowrap
     overflow hidden
     max-width 100%
-    @media $lDesktopSmall
-      fontify 12px 700 50px
-    span
-      fontify 23px 400 50px
-      pos relative
-      t 0
+    transition .7s top, .7s line-height
   &__col
+    pos relative
+    z-index 1
     w calc(50% - 30px)
+    &_col3
+      w calc(100% / 3 - 20px)
     &_wide
-      w calc(100% - 212px)
-    &_short
-      w 162px
+      w 100%
     @media $LandscapeMedium
       w 100%
       & + &
-        mt 22px
+        mt 35px
   &__row
     display flex
     justify-content space-between
@@ -369,9 +377,7 @@ div[class\^="table-scroller"]
     @media $LandscapeMedium
       flex-direction column
     & + &
-      mt 32px
-      @media $LandscapeMedium
-        mt 22px
+      mt 35px
   &__fileover
     w 100%
     pos relative
@@ -435,33 +441,39 @@ div[class\^="table-scroller"]
 .fakecheckbox
   ib()
   pos relative
-  margin 10px 0
   &__label
     ib()
-    color black
-    fontify 14px 400 24px
+    color alpha(white, .5)
+    fontify 14px 300 20px
     pos relative
-    pl 37px
-    pt 7px
+    pl 30px
+    pt 9px
     &:before 
       content ""
       pos absolute
       l 0px
       t 8px
-      size 20px
-      border 1px solid #ececec
+      size 16px
+      border 2px solid alpha(white, .5)
+      border-radius 4px
       cursor pointer
       transition .5s border
     &:after
       content ""
       pos absolute
-      size 16px 13px
-      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEX///////////////////////////////////8HBRbfAAAACHRSTlMAAyio8Dc4NlLA1+AAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOUlEQVQI12NgAANGBQjNIOwKFbCAMoRbArAIMAlABUIMoSpSmgUhKlg9jKFaQjqgWlhdAqDGl4JJAP/cCjh7XMPDAAAAAElFTkSuQmCC") no-repeat center
-      l 4px
-      t 13px
+      size 10px 7px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAMAAAAGcixRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9tAe1xAAAAInRSTlMAMeJ2BDvvyIHoKkb1ww/H6StU+bkKEs70/K4GE6IDzZQB32lQYAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABCSURBVAjXJYvFEcAwAMNUZoYUUvL+Q/Zy8Ud6yOAXhBHEzpJUGXlRQlWraenUD+OkeYHVaNt1nC6zRrpuf7bP+zn+aAUDdRP9KA0AAAAASUVORK5CYII=') no-repeat center
+      l 5px
+      t 15px
       opacity 0
       cursor pointer
       transition .5s opacity
+    a
+      color inherit
+      border-bottom 1px solid alpha(white, .2)
+      transition .7s border
+      &:hover
+        border-color transparent
   &__truecheck
     pos absolute
     l 0
@@ -473,7 +485,7 @@ div[class\^="table-scroller"]
     &:checked + ^[0]__label:after
       opacity 1
     &.warning + ^[0]__label:before 
-      border-color #ed1c24
+      border-color #ff0f37
     
 .totop
   pos fixed
@@ -515,7 +527,7 @@ div[class\^="table-scroller"]
 
 input.warning,
 textarea.warning
-  border-color $red
+  border-color #ff0f37
 
 .backtoblack
   ib()

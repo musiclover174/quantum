@@ -113,3 +113,78 @@
       transition 0.7s background
     &:hover span
       background-color #cbdcea
+
+.popup
+  max-width 922px
+  w 90%
+  bgc $blue
+  border-radius 5px
+  padding 50px 60px
+  font-family $os
+  color white
+  @media $PortraitMax
+    w 94%
+    padding 20px 30px
+  &__title
+    font-family $slab
+    fontify 36px 700 43px
+    mb 17px
+    @media $desktopMin
+      fontify 30px 700 37px
+    @media $PortraitMedium
+      fontify 26px 700 32px
+    @media $PortraitMin
+      fontify 19px 700 24px
+  &__subtitle
+    fontify 16px 300 22px
+    max-width 430px
+    mb 29px
+  &__hint
+    fontify 16px 300 22px
+    mb 37px
+  &__sbm
+    bgc white
+    white-space nowrap
+    color $blue
+    fontify 13px 700 48px
+    text-transform uppercase
+    letter-spacing .1em
+    padding 0 40px
+    transition .7s background, .7s color
+    &:hover
+      background-color alpha(#e8ebf5, .9)
+  &__warntext
+    color #ff0f37
+    fontify 13px 300 15px
+    width 175px
+    mr 25px
+    opacity 0
+    transition .7s opacity
+    @media $PortraitMedium
+      dn()
+    ^[0]__form.warning &
+      opacity 1
+      @media $PortraitMedium
+        db()
+        mb 20px
+        w 100%
+  &__submitover
+    display flex
+    align-items center
+    ml 30px
+    @media $LandscapeMedium
+      mt 30px
+      ml 0
+      w 100%
+      justify-content space-between
+    @media $PortraitMedium
+      flex-direction column
+      justify-content flex-start
+      align-items flex-start
+  &__bottom
+    df(center)
+    w 100%
+    justify-content space-between
+    @media $LandscapeMedium
+      flex-direction column
+      align-items flex-start

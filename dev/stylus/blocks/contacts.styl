@@ -1,0 +1,94 @@
+.contacts
+  df()
+  min-height calc(100vh - 592px)
+  @media $desktopMin
+    min-height inherit
+    flex-direction column
+  &__main,
+  &__mapover
+    w 50%
+    @media $desktopMin
+      w 100%
+  &__main
+    pr 85px
+    @media $desktopMin
+      pr 0
+  &__mapover
+    pos absolute
+    r 50px
+    h 100%
+    w calc(50% - 50px)
+    t 0
+    overflow hidden
+    @media $desktopMax
+      r 30px
+      w calc(50% - 30px)
+    @media $desktopMedium
+      r 0
+      w 50%
+    @media $desktopMin
+      pos relative
+      r auto
+      h 55vh
+      t auto
+      w calc(100% + 60px)
+      margin 25px -30px -90px
+  &__map
+    w 100%
+    h 100%
+  &__rows
+    dfv()
+    @media $desktopMin
+      flex-direction row
+      flex-wrap wrap
+      ml -40px
+      w calc(100% + 40px)
+  &__row
+    df()
+    pt 24px
+    pb 23px
+    w 100%
+    @media $desktopMin
+      padding 0
+      w calc(25% - 40px)
+      ml 40px
+      flex-direction column
+      pr 25px
+      mb 29px
+    @media $LandscapeMedium
+      w calc(100% / 3 - 40px)
+    @media $LandscapeMin
+      w calc(50% - 40px)
+    @media $PortraitMedium
+      w calc(100% - 40px)
+      pr 0
+    &:first-child
+      pt 0
+    &:last-child
+      pb 0
+    & + &
+      border-top 1px solid #e8ebf5
+      @media $desktopMin
+        border 0
+  &__title
+    color $dark
+    font-family $slab
+    fontify 16px 700 20px
+    w 160px
+    flex-shrink 0
+    @media $desktopMin
+      mb 10px
+  &__text
+    color $dark
+    fontify 16px 300 24px
+    max-width 230px
+  &__phone
+    color $dark
+    fontify 16px 300 24px
+  &__mail
+    color $dark
+    fontify 16px 300 24px
+    border-bottom 1px solid alpha($dark, .2)
+    transition .7s border
+    &:hover
+      border-color transparent

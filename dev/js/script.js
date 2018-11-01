@@ -165,6 +165,8 @@
       let checkResult = true;
       const warningElems = form.querySelectorAll('.warning');
 
+      form.classList.remove('warning')
+      
       if (warningElems.length) {
         for (let warningElem of warningElems) {
           warningElem.classList.remove('warning')
@@ -210,6 +212,9 @@
           checkResult = false
         }
       }
+      
+      if (!checkResult) form.classList.add('warning')
+        
       return checkResult
     }
 
@@ -333,6 +338,29 @@
       }
     },
     
+    contacts: () => {
+      const mapEl = document.querySelector('.js-contacts-map'),
+            geo = mapEl.getAttribute('data-coords').split(', ')
+
+			const map = new ymaps.Map(mapEl, {
+				center: [geo[0], geo[1]],
+				zoom: 14,
+				controls: [],
+				behaviors: ['default', 'scrollZoom']
+			})
+
+			const PMitem = new ymaps.Placemark([geo[0], geo[1]], {}, {
+				iconLayout: 'default#image',
+				iconImageSize: [27, 41],
+				iconImageHref: '/static/i/pin.png',
+				iconImageOffset: [-3, -42],
+				hideIconOnBalloonOpen: false,
+				balloonOffset: [-22, -49]
+			})
+      
+			map.geoObjects.add(PMitem)
+    },
+    
     init: function () {
 
       const burgerEl = document.querySelector('.js-burger'),
@@ -357,8 +385,18 @@
       if (document.querySelector('.js-banner')) this.banner()
       if (document.querySelector('.js-serts')) this.serts()
       if (document.querySelectorAll('.js-hover3d').length) this.hover3d()
+      if (document.querySelector('.js-contacts-map')) ymaps.ready(this.contacts)
          
       objectFitImages('img.fit')
+      
+      $('[data-fancybox]').fancybox({
+        i18n: {
+          en: {
+            CLOSE: "Закрыть"
+          }
+        },
+        touch: false
+      })
       
       window.addEventListener('scroll', () => {
         for (let item of elemsToCheck) {
