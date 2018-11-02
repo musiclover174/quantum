@@ -1,0 +1,83 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    +b.MAIN.content
+      +b.SECTION.catalog_sect
+        .container
+          section.breadcrumbs
+            a(href="#").breadcrumbs__href Главная
+            span.breadcrumbs__delim 
+            a(href="#").breadcrumbs__href Каталог
+            span.breadcrumbs__delim 
+          h1 КСО
+          
+          +e.SECTION.sect.js-sticky-parent
+            +e.left
+              +e.SECTION.filter
+                +e.filter-opener
+                  +e.filter-href.js-filter-opener(type="button") Фильтр по сферам применения
+                +e.filter-content.js-filter-content
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="filter1", checked)#filter1.fakecheckbox__truecheck
+                    label(for="filter1").fakecheckbox__label Гражданское строительство
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="filter2", checked)#filter2.fakecheckbox__truecheck
+                    label(for="filter2").fakecheckbox__label Промышленность и&nbsp;металлургия
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="filter3", checked)#filter3.fakecheckbox__truecheck
+                    label(for="filter3").fakecheckbox__label Межрегиональные и&nbsp;городские распределительные сети
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="filter4", checked)#filter4.fakecheckbox__truecheck
+                    label(for="filter4").fakecheckbox__label Нефтегазовая отрасль
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="filter5", checked)#filter5.fakecheckbox__truecheck
+                    label(for="filter5").fakecheckbox__label Электроснабжение индивидуальных объектов
+              +e.UL.list
+                +e.item
+                  +e.item-imgover(href="#")
+                    +e.item-img(src="img/catsect1.png")
+                  +e.item-content
+                    +e.item-href(href="#")
+                      span КСО-203
+                    +e.P.item-dsc Камера секционная одностороннего обслуживания (КСО) предназначена для работы в составе распределительных устройств в сетях трехфазного переменного тока частотой 50 Гц, номинальным напряжением 6 или 10 кВ с изолированной, заземленной через дугогасительный реактор или резистор нейтралью.
+                +e.item
+                  +e.item-imgover(href="#")
+                    +e.item-img(src="img/cat2.png")
+                  +e.item-content
+                    +e.item-href(href="#")
+                      span КСО-205
+                    +e.P.item-dsc Камеры KCО 205 предназначены для работы в электрических установках трехфазного переменного тока частотой 50 и 60 Гц напряжением 6 и 10 кВ для системы с изолированной или заземленной через дугогасящий реактор нейтралью, в условиях умеренного (У) климата и категории размещения 3 по ГОСТ 15150.
+                +e.item
+                  +e.item-imgover(href="#")
+                    +e.item-img(src="img/cat1.png")
+                  +e.item-content
+                    +e.item-href(href="#")
+                      span КСО-285
+                    +e.P.item-dsc Камеры KCО двухсотой серии предназначены для работы в электрических установках трехфазного переменного тока частотой 50 и 60 Гц напряжением 6 и 10 кВ для системы с изолированной или заземленной через дугогасящий реактор нейтралью, в условиях умеренного (У) климата и категории размеще¬ния 3 по ГОСТ 15150.
+                +e.item
+                  +e.item-imgover(href="#")
+                    +e.item-img(src="img/cat5.png")
+                  +e.item-content
+                    +e.item-href(href="#")
+                      span КСО-205
+                    +e.P.item-dsc Камеры KCО-298 предназначены для работы в электрических установках трехфазного переменного тока частотой 50 и 60 Гц напряжением 6 и 10 кВ для системы с изолированной или заземленной через дугогасящий реактор нейтралью, в условиях умеренного (У) климата и категории размещения 3 по ГОСТ 15150.
+                    
+              include blocks/pagination
+              
+            +e.ASIDE.aside.js-sticky
+              +e.sticky.js-sticky-inner
+                +e.other(href="#") КРУ
+                +e.other(href="#") БКТП
+                +e.other(href="#") КСО
+                +e.other(href="#") КТПН
+                +e.other(href="#") НКУ
+                +e.other(href="#") СТП
+                +e.other(href="#") УКРМ
+                        
+    include layout/__footer
+    include layout/__scripts

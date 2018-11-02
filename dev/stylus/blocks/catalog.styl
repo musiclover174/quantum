@@ -2,6 +2,19 @@
   mb 54px
   @media $LandscapeMin
     mb 70px
+  &_sect,
+  &_inner
+    mb 0
+  &_sect
+    pos relative
+    &:before
+      content ""
+      pos absolute
+      bgc #e8ebf5
+      l 0
+      t -65px
+      r 0
+      b -90px
   .container
     pos relative
   &__over
@@ -126,3 +139,169 @@
     transition .7s border-color
     &:hover
       border-color transparent
+  &__sect
+    df()
+  &__list + .pagination
+    mt 60px
+  &__item
+    display flex
+    align-items stretch
+    min-height 275px
+    background-color #f6f7fb
+    border-radius 5px
+    @media $PortraitMax
+      flex-direction column
+      align-items flex-start
+    & + &
+      mt 10px
+    &-imgover
+      dfv(center)
+      justify-content center
+      flex-shrink 0
+      w 275px
+      bgc white
+      transition .7s opacity
+      @media $PortraitMax
+        w 100%
+        h 275px
+      &:hover
+        opacity .7
+    &-img
+      max-width 90%
+      max-height 90%
+    &-content
+      w calc(100% - 275px)
+      padding 30px 39px 35px 39px
+      @media $PortraitMax
+        w 100%
+      @media $PortraitMedium
+        padding 15px 20px 20px 20px
+    &-href
+      color $dark
+      fontify 24px 600 34px
+      border-bottom 1px solid alpha($dark, .2)
+      transition .7s border, .7s color
+      @media $PortraitMedium
+        fontify 20px 600 28px
+      span
+        pos relative
+        t 4px
+        @media $PortraitMedium
+          t 2px
+      &:hover
+        border-color transparent
+        color $blue
+    &-dsc
+      mt 18px
+      color $dark
+      fontify 16px 300 24px
+  &__aside
+    w 270px
+    flex-shrink 0
+    @media $LandscapeMax
+      dn()
+  &__left
+    w calc(100% - 300px)
+    mr 30px
+    @media $LandscapeMax
+      mr 0
+      w 100%
+  &__sticky
+    dfv()
+    bgc #075e9d
+    border-radius 5px
+    padding 19px 0
+  &__other
+    pos relative
+    w 100%
+    color white
+    fontify 16px 700 20px
+    text-transform uppercase
+    letter-spacing .1em
+    padding 16px 45px
+    transition .7s background
+    &:hover
+      background-color #2d77ac
+    & + &:before
+      content ""
+      pos absolute
+      t 0
+      l 45px
+      r 45px
+      h 1px
+      background-color #2d77ac
+      transition .7s opacity
+    &:hover + &:before
+      opacity 0
+  &__filter
+    mb 10px
+    border-radius 5px
+    bgc #f6f7fb
+    &-opener
+      padding 17px 40px
+      @media $PortraitMedium
+        padding 13px 20px
+    &-href
+      cursor pointer
+      position relative
+      color $dark
+      font-family $slab
+      fontify 16px 700 18px
+      border-bottom 1px dotted $blue
+      transition .7s border
+      @media $PortraitMedium
+        fontify 14px 700 16px
+      @media $Mobile
+        fontify 13px 700 15px
+      &:after
+        content ""
+        pos absolute
+        t 8px
+        r -19px
+        size 10px 6px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAMAAADNLv/0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAS1BMVEUHXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///+5LBgvAAAAF3RSTlMAL8QgIbLlKisKtew1Ngan8qYDlwGHhmYZvbsAAAABYktHRBibaYUeAAAACXBIWXMAAAsSAAALEgHS3X78AAAAO0lEQVQI1x3KQQKAEAAF0aEoRKL6979p8TazGYxd+K3W4OQ32L0cISodOSkGKKdq1VXG1rrUG9P9vCMfPxICJTKCt9AAAAAASUVORK5CYII=') no-repeat center
+        transition .7s transform
+        will-change transform
+        @media $PortraitMedium
+          t 6px  
+        @media $Mobile
+          t 5px
+          r -14px
+      &:hover
+        border-color transparent
+      &.open:after
+        transform rotate(180deg)
+    &-content
+      dn()
+      &.open
+        df()
+      flex-wrap wrap
+      bgc white
+      border-radius 0px 0px 5px 5px
+      padding 34px 40px 20px 10px
+      @media $PortraitMedium
+        padding 15px 20px 7px 20px
+      .fakecheckbox
+        ml 30px
+        mb 15px
+        w calc(100% / 3 - 30px)
+        @media $PortraitMax
+          w calc(50% - 30px)
+        @media $PortraitMedium
+          w 100%
+          ml 0
+      .fakecheckbox__label
+        color $dark
+        pl 40px
+        pt 12px
+        font-size 16px
+        @media $PortraitMedium
+          font-size 14px
+        &:before
+          size 25px
+          border 1px solid #cedfec
+        &:after
+          size 15px 11px
+          l 6px
+          t 16px
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAALCAMAAACXmSduAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEUHXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///8ORmoaAAAAL3RSTlMAHsIwId+zJ+O+Cyrntwox67EGL8UgNe6p5Ss88aMDtOw2QvSaAgWm8vaUAZeOhjc8Zh8AAAABYktHRDCu3C3kAAAACXBIWXMAAAsSAAALEgHS3X78AAAAZUlEQVQI12NgQAKMTMzIXBZWfTYkLjuHPicXgsvNo8/Lh+DyC+gLCgFpYRFREFdMXF8CxGUQ1JeUYmCQltGXlQOr45PXV1BUUtZXUYVqVFPX19DU19KGm6Sqo6+vi+wObT09uCwA4SwHd99ev5oAAAAASUVORK5CYII=') no-repeat center

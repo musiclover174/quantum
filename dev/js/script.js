@@ -361,6 +361,25 @@
 			map.geoObjects.add(PMitem)
     },
     
+    sticky: () => {
+      const sidebar = new StickySidebar('.js-sticky', {
+        containerSelector: '.js-sticky-parent',
+        innerWrapperSelector: '.js-sticky-inner',
+        topSpacing: 20,
+        bottomSpacing: 0
+      })
+    },
+    
+    filter: () => {
+      const elOpener = document.querySelector('.js-filter-opener'),
+            elContent = document.querySelector('.js-filter-content')
+      
+      elOpener.addEventListener('click', () => {
+        elOpener.classList.toggle('open')
+        elContent.classList.toggle('open')
+      })
+    },
+    
     init: function () {
 
       const burgerEl = document.querySelector('.js-burger'),
@@ -386,6 +405,8 @@
       if (document.querySelector('.js-serts')) this.serts()
       if (document.querySelectorAll('.js-hover3d').length) this.hover3d()
       if (document.querySelector('.js-contacts-map')) ymaps.ready(this.contacts)
+      if (document.querySelector('.js-sticky')) this.sticky()
+      if (document.querySelector('.js-filter-opener')) this.filter()
          
       objectFitImages('img.fit')
       

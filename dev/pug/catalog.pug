@@ -1,0 +1,82 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    +b.MAIN.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim 
+        h1 Каталог
+        
+        +b.SECTION.catalog_inner
+          +e.over
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat1.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span КРУ
+              +e.P.desc Комплектное распределительное устройство
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat2.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span КСО
+              +e.P.desc Камера сборная одностороннего обслуживания
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat3.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span ЯКНО
+              +e.P.desc Ячейка комплектная наружной установки отдельностоящая 
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat4.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span КТПН
+              +e.P.desc Комплектные трансформаторные подстанции
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat5.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span НКУ
+              +e.P.desc Низковольтные комплектные устройства
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat6.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span УКРМ
+              +e.P.desc Установки компенсации реактивной мощности
+            +e.elem
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat7.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span БМЗ
+              +e.P.desc Блочно модульные здания
+            +e.elem._more
+              +e.imgover.js-hover3d(href="#")
+                +e.img(src="img/cat8.png")
+                +e.SPAN.border
+              +e.name(href="#") 
+                span Дополнительные услуги
+              +e.NAV.hrefs
+                +e.UL.hrefs-list
+                  +e.hrefs-item
+                    +e.href(href="#") Корпуса электрооборудования
+                  +e.hrefs-item
+                    +e.href(href="#") Резка металла
+                  +e.hrefs-item
+                    +e.href(href="#") Гибка металла
+    include layout/__footer
+    include layout/__scripts
