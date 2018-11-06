@@ -1,0 +1,158 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    +b.MAIN.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim 
+          a(href="#").breadcrumbs__href Каталог
+          span.breadcrumbs__delim 
+          a(href="#").breadcrumbs__href КСО
+          span.breadcrumbs__delim 
+        h1 Камера секционная одностороннего обслуживания двухсотой серии КСО-203
+        
+        +b.SECTION.card.js-sticky-parent
+          +e.ASIDE.side.js-sticky
+            +e.sticky.js-sticky-inner
+              +e.imgover
+                +e.img(src="img/cat5.png")
+              +e.UL.docs-list
+                +e.docs-item
+                  +e.docs-href(href="#") Опросный лист
+                +e.docs-item
+                  +e.docs-href(href="#") Каталог
+                +e.docs-item
+                  +e.docs-href(href="#") Руководство по эксплуатации
+                +e.docs-item
+                  +e.docs-href(href="#") Технические характеристики
+                +e.docs-item
+                  +e.docs-href(href="#") Сертификат
+          +e.main
+            +e.order.btn(type="button", data-fancybox) Заказать заявку на расчет
+            +e.textblock
+              h4 Описание
+              p Камера секционная одностороннего обслуживания (КСО) предназначена для работы в составе распределительных устройств в сетях трехфазного переменного тока частотой 50 Гц, номинальным напряжением 6 или 10 кВ с изолированной, заземленной через дугогасительный реактор или резистор нейтралью.
+            +e.textblock
+              h4 Сфера применения
+              ul
+                li Городские распределительные сети
+                li Промышленность
+            +e.textblock
+              h4 Преимущества оборудования КСО
+              +e.UL.features
+                +e.feature
+                  +e.feature-top
+                    +e.feature-icon(src="img/cardf1.png")
+                    +e.SPAN.feature-title Универсальность
+                  +e.P.feature-text Камеры КСО двухсотой серии как правило комплектуются вакуумными выключателями.
+                +e.feature
+                  +e.feature-top
+                    +e.feature-icon(src="img/cardf2.png")
+                    +e.SPAN.feature-title Удобство эксплуатации
+                  +e.P.feature-text Для обзора внутреннего пространства камеры на дверях отсеков выполнены смотровые окна. 
+                +e.feature
+                  +e.feature-top
+                    +e.feature-icon(src="img/cardf3.png")
+                    +e.SPAN.feature-title Надежность
+                  +e.P.feature-text В камерах устанавливается надежное оборудование, возрастает ресурс коммутационной стойкости вакуумных выключателей.      
+                +e.feature
+                  +e.feature-top
+                    +e.feature-icon(src="img/cardf4.png")
+                    +e.SPAN.feature-title Безопасность
+                  +e.P.feature-text Камеры КСО снабжены системой встроенных электромагнитных и механических блокировок. 
+            +e.textblock
+              h4 Технические характеристики
+              table
+                tbody
+                  tr
+                    td
+                      b Номинальное напряжение, кВ
+                    td
+                      b 6; 10
+                  tr
+                    td
+                      b Наибольшее рабочее напряжение, кВ
+                    td
+                      b 7,2; 12
+                  tr
+                    td
+                      b Номинальный ток, А<br>
+                      | &emsp;Сборных шин<br>
+                      | &emsp;Линейных выводов<br>
+                      | &emsp;Предохранителей<br>
+                      | &emsp;Силовых выключателей<br>
+                      | &emsp;Выключателей нагрузки<br>
+                      | &emsp;Разъединителей<br>
+                      | &emsp;Трансформаторов тока
+                    td
+                      br
+                      b 630;1000;<br>
+                      b 630;800;<br>
+                      b не&nbsp;более&nbsp;200<br>
+                      b 630; 1000<br>
+                      b 630<br>
+                      b 630; 1000<br>
+                      b 50-1500
+                  tr
+                    td
+                      b Номинальный ток отключения силовых выключателей, кА 
+                    td
+                      b 20; 31,5
+                  tr
+                    td
+                      b Ток термической стойкости при длительности протекания 3 с, кА
+                    td
+                      b 20
+                  tr
+                    td
+                      b Степень защиты по ГОСТ 14254 
+                    td
+                      b IP31
+                  tr
+                    td
+                      b Срок службы не менее, лет	
+                    td
+                      b 30
+            +e.textblock
+              h4 Условия эксплуатации
+              p Камеры секционные одностороннего обслуживан ия (КСО) предназначены для работы при следующих условиях окружающей среды:
+              ul
+                li Ннаибольшая высота установки над уровнем моря не более 1000 м;
+                li Рабочий диапазон температур окружающего воздуха от -40оС до +45оС;
+                li Относительная влажность воздуха не более 75% при температуре +15оС;
+                li Тип атмосферы II по ГОСТ 15150;
+                li Окружающая среда невзрывоопасная, не содержащая токопроводящей пыли, агрессивных газов и паров в концентрациях, разрушающих материалы и изоляцию.
+            +e.textblock
+              h4 Структура условного обозначения КСО
+              +e.scheme(href="img/scheme.jpg", data-fancybox="scheme")
+                +e.scheme-img(src="img/scheme.jpg")
+            +e.textblock
+              h4 Фотогалерея
+              +e.UL.gallery
+                +e.gallery-item
+                  +e.gallery-href(href="img/gal1.jpg", data-fancybox="gallery")
+                    +e.gallery-img.fit(src="img/gal1.jpg")
+                +e.gallery-item
+                  +e.gallery-href(href="img/gal2.jpg", data-fancybox="gallery")
+                    +e.gallery-img.fit(src="img/gal2.jpg")
+                +e.gallery-item
+                  +e.gallery-href(href="img/gal3.jpg", data-fancybox="gallery")
+                    +e.gallery-img.fit(src="img/gal3.jpg")
+                +e.gallery-item
+                  +e.gallery-href(href="img/gal4.jpg", data-fancybox="gallery")
+                    +e.gallery-img.fit(src="img/gal4.jpg")
+                +e.gallery-item
+                  +e.gallery-href(href="img/gal5.jpg", data-fancybox="gallery")
+                    +e.gallery-img.fit(src="img/gal5.jpg")
+                +e.gallery-item
+                  +e.gallery-href(href="img/gal6.jpg", data-fancybox="gallery")
+                    +e.gallery-img.fit(src="img/gal6.jpg")
+            a(href="#").backtoblack Вернуться в раздел каталога
+    include layout/__footer
+    include layout/__scripts
