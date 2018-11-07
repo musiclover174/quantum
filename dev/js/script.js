@@ -293,6 +293,36 @@
       })
     },
     
+    partners: () => {
+      const bannerSwiper = new Swiper('.js-partn', {
+        loop: true,
+        slidesPerView: 5,
+        speed: 700,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 5000
+        },
+        navigation: {
+          nextEl: '.js-partn ~ .swiper-buttons .swiper-button-next',
+          prevEl: '.js-partn ~ .swiper-buttons .swiper-button-prev',
+        },
+        breakpoints: {
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 40
+          },
+          700: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          },
+          1000: {
+            slidesPerView: 4,
+            spaceBetween: 40
+          }
+        }
+      })
+    },
+    
     serts: () => {
       const bannerSwiper = new Swiper('.js-serts', {
         loop: true,
@@ -407,6 +437,7 @@
       if (document.querySelector('.js-contacts-map')) ymaps.ready(this.contacts)
       if (document.querySelector('.js-sticky')) this.sticky()
       if (document.querySelector('.js-filter-opener')) this.filter()
+      if (document.querySelector('.js-partn')) this.partners()
          
       objectFitImages('img.fit')
       

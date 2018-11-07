@@ -1,0 +1,179 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    +b.MAIN.content
+    
+      section.about__top
+        .container
+          .about__top-main
+            section.breadcrumbs
+              a(href="#").breadcrumbs__href Главная
+              span.breadcrumbs__delim 
+            h1 О компании
+            p.about__top-sub Компания ООО «Квантум Энерго» оказывает услуги строительства и модернизации систем электроснабжения, поставки / производства / предоставление высокотехнологичного оборудования и сервисного обслуживания для наших клиентов. 
+          aside.about__top-side
+            img(src="img/about-banner.png").about__top-img
+      
+      section.about__mission
+        svg(viewbox="0 0 1824.5 825.5").orbit.orbit_elem11
+          path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+   d="M1.066,818.172 C1.066,818.172 457.820,862.056 737.396,682.717 C900.202,578.282 957.946,483.014 1038.901,333.197 C1119.857,183.380 1176.476,120.008 1252.894,68.129 C1411.972,-39.869 1822.651,14.455 1822.651,14.455", id="orbit1")
+          circle(r="4.5", fill="rgb(245, 130, 31)")
+            animateMotion(dur="15s", repeatCount="indefinite", calcMode="linear")
+              mpath(xlink:href="#orbit1")
+        svg(viewbox="0 0 1957.5 801.5").orbit.orbit_elem12
+          path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+   d="M1.337,750.933 C1.337,750.933 415.481,843.369 721.078,772.723 C1026.675,702.078 1150.452,557.227 1217.810,430.584 C1285.170,303.940 1352.038,174.569 1451.207,103.096 C1635.360,-29.629 1956.384,4.763 1956.384,4.763", id="orbit2")
+          circle(r="4.5", fill="rgb(7, 94, 157)")
+            animateMotion(dur="12s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+              mpath(xlink:href="#orbit2")
+              
+        .container
+          aside.about__mission-side
+            .about__mission-imgover
+              img(src="img/about-mission.jpg").about__mission-img.fit
+          .about__mission-main
+            p.about__mission-title Наша миссия
+            p.about__mission-text Создание возможностей модернизации и строительства систем электроснабжения наших Клиентов за счет предоставления высокотехнологичного оборудования и сервисного обслуживания.
+          
+      section.about__prod
+        svg(viewbox="0 0 296.5 1352.5").orbit.orbit_elem13
+          path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+   d="M293.921,1350.572 C281.155,1185.512 95.675,1112.186 17.549,728.796 C-63.443,369.375 246.785,1.421 246.785,1.421", id="orbit3")
+          circle(r="4.5", fill="rgb(245, 130, 31)")
+            animateMotion(dur="15s", repeatCount="indefinite", calcMode="linear")
+              mpath(xlink:href="#orbit3")
+        svg(viewbox="0 0 455.5 1427.5").orbit.orbit_elem14
+          path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+   d="M327.106,1425.750 C316.997,1381.342 298.443,1290.026 214.668,1178.275 C142.564,1082.094 -96.305,774.797 52.162,425.391 C147.546,172.515 453.050,1.358 453.050,1.358", id="orbit4")
+          circle(r="4.5", fill="rgb(7, 94, 157)")
+            animateMotion(dur="12s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+              mpath(xlink:href="#orbit4")
+        .container
+          p.about__prod-title Компания ООО «Квантум Энерго» изготавливает следующие виды продукции
+          ol.about__prod-list
+            li.about__prod-item
+              span.about__prod-digit 01
+              a(href="#").about__prod-href Комплектные распределительные устройства КРУ на напряжение 6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 02
+              a(href="#").about__prod-href Камеры одностороннего обслуживания КСО на напряжение 6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 03
+              a(href="#").about__prod-href Комплектные трансформаторные подстанции наружной установки КТПН – 6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 04
+              a(href="#").about__prod-href Передвижные(колесные) трансформаторные подстанции ККТП – 6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 05
+              a(href="#").about__prod-href Блочно-модульные бетонные трансформаторные подстанции БКТП – 6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 06
+              a(href="#").about__prod-href Высоковольтные распределительные шкафы 2КВЭ-6 кВ, ЯКНО 6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 07
+              a(href="#").about__prod-href Пункты коммерческого учета ПКУ-6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 08
+              a(href="#").about__prod-href Закрытые распределительные устройства ЗРУ-6-10 кВ
+            li.about__prod-item
+              span.about__prod-digit 09
+              a(href="#").about__prod-href Низковольтные шкафы ЩО-70, ШНН, НКУ, ПР, ЯРВ и др.
+            li.about__prod-item
+              span.about__prod-digit 10
+              a(href="#").about__prod-href Установки компенсации реактивной мощности УКРМ.
+              
+      section.about__client
+        .container
+          .about__client-shift
+            p.about__client-title Клиентоориентированность —
+            p.about__client-text это именно то, что делает сотрудничество с нами удобным и выгодным.
+          ul.about__client-list
+            li.about__client-item
+              .about__client-iconover
+                img(src="img/about-i1.png").about__client-icon
+              p.about__client-name гибкая ценовая политика
+            li.about__client-item
+              .about__client-iconover
+                img(src="img/about-i2.png").about__client-icon
+              p.about__client-name Индивидуальный подход
+            li.about__client-item
+              .about__client-iconover
+                img(src="img/about-i3.png").about__client-icon
+              p.about__client-name удобные сроки поставки
+              
+      section.about__serv
+        svg(viewbox="0 0 296.5 1352.5").orbit.orbit_elem15
+          path(stroke="rgb(245, 130, 31)", stroke-width="1px", fill="none", 
+   d="M293.921,1350.572 C281.155,1185.512 95.675,1112.186 17.549,728.796 C-63.443,369.375 246.785,1.421 246.785,1.421", id="orbit5")
+          circle(r="4.5", fill="rgb(245, 130, 31)")
+            animateMotion(dur="15s", repeatCount="indefinite", calcMode="linear")
+              mpath(xlink:href="#orbit5")
+        svg(viewbox="0 0 455.5 1427.5").orbit.orbit_elem16
+          path(stroke="rgb(7, 94, 157)", stroke-width="1px", fill="none", 
+   d="M327.106,1425.750 C316.997,1381.342 298.443,1290.026 214.668,1178.275 C142.564,1082.094 -96.305,774.797 52.162,425.391 C147.546,172.515 453.050,1.358 453.050,1.358", id="orbit6")
+          circle(r="4.5", fill="rgb(7, 94, 157)")
+            animateMotion(dur="12s", repeatCount="indefinite", calcMode="linear", keyPoints="1;0" keyTimes="0;1")
+              mpath(xlink:href="#orbit6")
+        .container
+          .about__serv-main
+            p.about__serv-title Дополнительное сервисное обслуживание
+            .about__serv-text
+              p Мы осуществляем шеф-монтаж оборудования, а так же пуско-наладочные работы на вашем предприятии. Ключевыми факторами надежной и бесперебойной работы электрооборудования являются не только качество поставляемой продукции, но и качественный монтаж и пуско-наладочные работы.
+              p Риски, связанные с задержкой ввода в эксплуатацию и преждевременного вывода из строя электрооборудования сводятся к минимуму благодаря профессиональной поддержке специалистов.
+          aside.about__serv-side
+            img(src="img/about-serv.png").about__serv-img
+            
+      section.about__priorit
+        .container
+          aside.about__priorit-side
+            img(src="img/about-priorit.png").about__priorit-img
+          .about__priorit-main
+            p.about__priorit-title Наши приоритеты
+            ul.about__priorit-list
+              li.about__priorit-item
+                img(src="img/about-p1.png").about__priorit-icon
+                span.about__priorit-text Качество
+              li.about__priorit-item
+                img(src="img/about-p2.png").about__priorit-icon
+                span.about__priorit-text Надежность
+              li.about__priorit-item
+                img(src="img/about-p3.png").about__priorit-icon
+                span.about__priorit-text Оперативность
+              li.about__priorit-item
+                img(src="img/about-p4.png").about__priorit-icon
+                span.about__priorit-text Профессионализм
+              li.about__priorit-item
+                img(src="img/about-p5.png").about__priorit-icon
+                span.about__priorit-text Гибкость
+            .about__priorit-bimg
+              img(src="img/about-fire.jpg").about__priorit-fire
+              
+      section.about__partn
+        .container
+          p.about__partn-title Наши партнёры
+          p.about__partn-text Мы сотрудничаем с крупнейшими компаниями  во многих городах России.
+          .swiper-container.about__partn-car.js-partn
+            .swiper-wrapper
+              .swiper-slide
+                img(src="img/about-partn1.png").about__partn-logo
+              .swiper-slide
+                img(src="img/about-partn2.png").about__partn-logo
+              .swiper-slide
+                img(src="img/about-partn3.png").about__partn-logo
+              .swiper-slide
+                img(src="img/about-partn4.png").about__partn-logo
+              .swiper-slide
+                img(src="img/about-partn5.png").about__partn-logo
+              .swiper-slide
+                img(src="img/about-partn3.png").about__partn-logo
+          .swiper-buttons
+            .swiper-button-prev
+            .swiper-button-next
+    include layout/__footer
+    include layout/__scripts

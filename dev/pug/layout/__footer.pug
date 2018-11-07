@@ -57,3 +57,37 @@ include ../bemto/bemto.pug
           +e.submitover
             +e.P.warntext Некоторые поля заполнены неправильно или заполнены с&nbspошибкой.
             button(type="submit").common__sbm.popup__sbm Заказать звонок
+            
+  +b.popup#calc
+    +e.P.title Заказать заявку на расчёт
+    +e.P.subtitle Заполните поля ниже и наши специалисты свяжуться с Вами в ближайшее время.
+    +e.P.hint Поля со «*» обязательны для заполнения.
+    +e.FORM.form
+      .common__row
+        .common__col.common__col_col3
+          input(data-req="req").common__input
+          label.common__placeholder Имя*
+        .common__col.common__col_col3
+          input(data-req="req").common__input.js-phone
+          label.common__placeholder Телефон*
+        .common__col.common__col_col3
+          input(data-type="email").common__input
+          label.common__placeholder E-mail
+      .common__row
+        .common__col.common__col_wide
+          textarea.common__textarea
+          label.common__placeholder Ваше сообщение
+      .common__row
+        .common__fileover
+          input(type="file", name="", data-req="").common__file#file1.js-common-fileinput
+          label(for="file1", data-default="Прикрепить файл").common__filename.js-common-file Прикрепить файл
+          button(type="button").common__filedelete.js-common-filedelete
+      .common__row
+        +e.bottom
+          .fakecheckbox
+            input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+            label(for="agreement").fakecheckbox__label Согласен на обработку 
+              a(href="#") персональных данных
+          +e.submitover
+            +e.P.warntext Некоторые поля заполнены неправильно или заполнены с&nbspошибкой.
+            button(type="submit").common__sbm.popup__sbm Заказать звонок

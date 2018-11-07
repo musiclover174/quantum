@@ -60,3 +60,421 @@
       max-width 395px
       @media $LandscapeMin
         max-width inherit
+      
+  &__top
+    bgc #e8ebf5
+    mt -65px
+    pt 65px
+    pos relative
+    z-index 1
+    @media $LandscapeMax
+      mt -70px
+      pt 70px
+    @media $LandscapeMin
+      pb 60px
+    & > .container
+      df()
+      @media $LandscapeMin
+        dfv()
+    &-main,
+    &-side
+      w calc(50% - 15px)
+      mb 30px
+      @media $LandscapeMin
+        w 100%
+        mb 0
+    &-side
+      ml 30px
+      text-align right
+      mt -6px
+      @media $LandscapeMin
+        dn()
+    &-img
+      pos relative
+      r -17px
+      @media $desktopMin
+        max-width 100%
+    &-sub
+      pos relative
+      color $dark
+      fontify 24px 600 36px
+      pt 33px
+      mt -4px
+      @media $desktopMin
+        fontify 20px 600 32px
+      @media $LandscapeMedium
+        fontify 18px 600 26px
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t 0
+        h 2px 
+        bgc $blue
+        w 83px
+  &__mission
+    pos relative
+    padding 100px 0
+    mb 90px
+    @media $LandscapeMin
+      pt 70px
+      pb 60px
+      mb 60px
+    &:before
+      content ""
+      pos absolute
+      z-index -1
+      l 0
+      t 0
+      w 58%
+      h 100%
+      bgc #f6f7fb
+      @media $LandscapeMin
+        w 100%
+    & > .container
+      df(center)
+      @media $LandscapeMin
+        dfv()
+    &-main,
+    &-side
+      w calc(50% - 15px)
+      @media $LandscapeMin
+        w 100%
+    &-side
+      pos relative
+      mr 30px
+      @media $LandscapeMin
+        mr 0
+        mb 40px
+      &:before
+        content ""
+        pos absolute
+        r -3px
+        t 50%
+        size 2px 83px
+        bgc $blue
+        mt -41px
+        @media $LandscapeMin
+          dn()
+    &-main
+      pl 40px
+      @media $LandscapeMin
+        pl 0
+    &-title
+      color $dark
+      font-family $slab
+      fontify 30px 700 37px
+      @media $PortraitMedium
+        fontify 22px 700 26px
+      @media $PortraitMin
+        fontify 18px 700 23px
+      mb 20px
+    &-text
+      color $dark
+      fontify 16px 300 24px
+      max-width 420px
+      @media $LandscapeMin
+        max-width none
+    &-imgover
+      size 301px 400px
+      bgc $blue
+      border-radius 5px
+      overflow hidden
+      margin 0 auto
+      @media $LandscapeMedium
+        size 250px 340px
+      @media $LandscapeMin
+        size 301px 400px
+        ml 0
+      @media $PortraitMin
+        w 100%
+  &__prod
+    mb 96px
+    pos relative
+    z-index 1
+    &-title
+      color $dark
+      font-family $slab
+      fontify 24px 700 37px
+      mb 17px
+      max-width 560px
+      @media $PortraitMedium
+        fontify 22px 700 26px
+      @media $PortraitMin
+        fontify 18px 700 23px
+    &-list
+      df()
+      flex-wrap wrap
+      ml -30px
+      w calc(100% + 30px)
+      counter-reset myCounter
+    &-item
+      pos relative
+      z-index 1
+      w calc(25% - 30px)
+      ml 30px
+      mb 7px
+      padding 25px 15px 25px 29px
+      @media $LandscapeMedium
+        w calc(100% / 3 - 30px)
+      @media $LandscapeMin
+        w calc(50% - 30px)
+      @media $PortraitMedium
+        w calc(100% - 30px)
+      &:before
+        content ""
+        pos absolute
+        z-index -1
+        l -30px
+        t 0
+        h 100%
+        bgc #f6f7fb
+        border-radius 5px
+        w 0
+        transition .7s width
+      &:hover:before
+        w 50%
+    &-digit
+      pos absolute
+      l 0
+      t 27px
+      color $blue
+      fontify 12px 700 24px
+    &-href
+      color $dark
+      fontify 16px 300 24px
+      border-bottom 1px solid alpha($dark, .4)
+      transition .7s border, .7s color
+      &:hover
+        color $blue
+        border-color transparent
+  &__client
+    pb 104px
+    @media $LandscapeMin
+      pb 70px
+    .container
+      pos relative
+      &:before
+        content ""
+        pos absolute
+        size 495px
+        z-index -1
+        l 0
+        t -33px
+        background url('../i/k.png') no-repeat center
+        @media $LandscapeMin
+          dn()
+    &-shift
+      pl 42.7%
+      mb 60px
+      @media $LandscapeMedium
+        pl 25%
+      @media $LandscapeMin
+        pl 0
+    &-title
+      color $dark
+      font-family $slab
+      fontify 30px 700 37px
+      @media $PortraitMedium
+        fontify 22px 700 26px
+      @media $PortraitMin
+        fontify 18px 700 23px
+      mb 24px
+    &-text
+      color $dark
+      fontify 16px 300 24px
+      max-width 310px
+    &-list
+      df()
+      justify-content center
+      @media $LandscapeMedium
+        justify-content space-between
+      @media $PortraitMax
+        dfv()
+        justify-content flex-start
+    &-item
+      w 200px
+      & + &
+        ml 100px
+        @media $LandscapeMedium
+          ml 30px
+        @media $PortraitMax
+          ml 0
+          mt 40px
+    &-iconover
+      h 93px
+      dfv()
+      justify-content center
+      mb 20px
+    &-icon
+      max-height 100%
+      max-width 100%
+    &-name
+      color $blue
+      fontify 16px 600 24px
+      text-transform uppercase
+      letter-spacing .1em
+      @media $PortraitMin
+        fontify 14px 600 22px
+  &__serv
+    bgc #f6f7fb
+    padding 40px 0
+    pos relative
+    @media $LandscapeMin
+      pt 60px
+    & > .container
+      df(center)
+      @media $LandscapeMin
+        dfv()
+    &-main,
+    &-side
+      w calc(50% - 15px)
+      @media $LandscapeMin
+        w 100%
+    &-side
+      pos relative
+      ml 30px
+      text-align left
+      @media $LandscapeMin
+        ml 0
+        mt 40px
+    &-title
+      color $dark
+      font-family $slab
+      fontify 30px 700 37px
+      @media $PortraitMedium
+        fontify 22px 700 26px
+      @media $PortraitMin
+        fontify 18px 700 23px
+      mb 20px
+    &-text
+      color $dark
+      max-width 450px
+      @media $LandscapeMin
+        max-width inherit
+    &-img
+      pos relative
+      max-width calc(100% + 30px)
+      @media $LandscapeMedium
+        max-width 100%
+  &__priorit
+    padding 30px 0 80px
+    @media $LandscapeMin
+      pb 40px
+    & > .container
+      df()
+      @media $LandscapeMedium
+        dfv()
+    &-main,
+    &-side
+      w calc(50% - 15px)
+      @media $LandscapeMedium
+        w 100%
+    &-side
+      pos relative
+      mr 30px
+      @media $LandscapeMedium
+        dn()
+    &-main
+      pt 130px
+      pos relative
+      z-index 1
+      @media $LandscapeMedium
+        pt 40px
+      &:after
+        content ""
+        pos absolute
+        z-index -1
+        r 0
+        t 120px
+        size 435px 481px
+        background url('../i/e.png') no-repeat center
+        @media $LandscapeMin
+          dn()
+    &-title
+      color $dark
+      font-family $slab
+      fontify 30px 700 37px
+      @media $PortraitMedium
+        fontify 22px 700 26px
+      @media $PortraitMin
+        fontify 18px 700 23px
+      mb 45px
+    &-img
+      max-width 100%
+    &-list
+      df()
+      flex-wrap wrap
+    &-item
+      df(center)
+      w 50%
+      pr 20px
+      mb 35px
+      @media $PortraitMedium
+        w 100%
+        pr 0
+    &-icon
+      mr 25px
+    &-text
+      color $dark
+      fontify 18px 700 24px
+    &-bimg
+      text-align right
+    &-fire
+      size 300px 200px
+      bgc #d3d2d3
+      border-radius 5px
+      overflow hidden
+      mt 55px
+      @media $PortraitMin
+        dn()
+  &__partn
+    background-color #f6f7fb
+    padding 70px 0 80px
+    mb -90px
+    & > .container
+      pos relative
+    &-title
+      color $dark
+      font-family $slab
+      fontify 30px 700 37px
+      @media $PortraitMedium
+        fontify 22px 700 26px
+      @media $PortraitMin
+        fontify 18px 700 23px
+      mb 27px
+    &-text
+      max-width 340px
+      color $dark
+      fontify 16px 300 24px
+      mb 31px
+    &-car
+      .swiper-slide
+        dfv(center)
+        justify-content center
+        h 140px
+    .swiper-buttons
+      w 126px
+      h 54px
+      pos absolute
+      r 0
+      t 10px
+      @media $PortraitMax
+        margin 0 auto
+        pos relative
+        r auto
+        t 0
+        mt 30px
+      .swiper-button-prev
+        l 0
+      .swiper-button-next
+        r 0
+    &-logo
+      max-height 90%
+      max-width 100%
+      opacity .3
+      filter grayscale(100%)
+      transition .7s opacity, .7s filter
+      &:hover
+        filter grayscale(0%)
+        opacity 1

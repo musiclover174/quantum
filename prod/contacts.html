@@ -168,6 +168,56 @@
                                       </div>
                                     </form>
                   </div>
+                  <div class="popup" id="calc">
+                                    <p class="popup__title">Заказать заявку на расчёт
+                                    </p>
+                                    <p class="popup__subtitle">Заполните поля ниже и наши специалисты свяжуться с Вами в ближайшее время.
+                                    </p>
+                                    <p class="popup__hint">Поля со «*» обязательны для заполнения.
+                                    </p>
+                                    <form class="popup__form">
+                                      <div class="common__row">
+                                        <div class="common__col common__col_col3">
+                                          <input class="common__input" data-req="req">
+                                          <label class="common__placeholder">Имя*</label>
+                                        </div>
+                                        <div class="common__col common__col_col3">
+                                          <input class="common__input js-phone" data-req="req">
+                                          <label class="common__placeholder">Телефон*</label>
+                                        </div>
+                                        <div class="common__col common__col_col3">
+                                          <input class="common__input" data-type="email">
+                                          <label class="common__placeholder">E-mail</label>
+                                        </div>
+                                      </div>
+                                      <div class="common__row">
+                                        <div class="common__col common__col_wide">
+                                          <textarea class="common__textarea"></textarea>
+                                          <label class="common__placeholder">Ваше сообщение</label>
+                                        </div>
+                                      </div>
+                                      <div class="common__row">
+                                        <div class="common__fileover">
+                                          <input class="common__file js-common-fileinput" type="file" name="" data-req="" id="file1">
+                                          <label class="common__filename js-common-file" for="file1" data-default="Прикрепить файл">Прикрепить файл</label>
+                                          <button class="common__filedelete js-common-filedelete" type="button"></button>
+                                        </div>
+                                      </div>
+                                      <div class="common__row">
+                                                        <div class="popup__bottom">
+                                                          <div class="fakecheckbox">
+                                                            <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement">
+                                                            <label class="fakecheckbox__label" for="agreement">Согласен на обработку <a href="#">персональных данных</a></label>
+                                                          </div>
+                                                                          <div class="popup__submitover">
+                                                                                            <p class="popup__warntext">Некоторые поля заполнены неправильно или заполнены с&nbspошибкой.
+                                                                                            </p>
+                                                                            <button class="common__sbm popup__sbm" type="submit">Заказать звонок</button>
+                                                                          </div>
+                                                        </div>
+                                      </div>
+                                    </form>
+                  </div>
     </div>
     <script type="text/javascript" src="static/js/polyfill.js"></script>
     <script type="text/javascript" src="static/js/vendor.js"></script>
