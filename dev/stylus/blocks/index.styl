@@ -170,12 +170,12 @@
   &__list
     display flex
     align-items flex-start
-    justify-content space-between
+    flex-wrap: wrap
     @media $LandscapeMax
-      flex-wrap wrap
       justify-content flex-start
   &__item
-    w 200px
+    w calc(100% / 6)
+    padding-right 15px
     @media $desktopMax
       pr 20px
     @media $LandscapeMax
@@ -185,6 +185,12 @@
       w 50%
     @media $PortraitMedium
       w 100%
+  &__hidden-container
+    display: none
+  &__btn 
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px
   &__iconover
     h 40px
     display flex
