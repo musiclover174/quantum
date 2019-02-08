@@ -4542,7 +4542,7 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   .industry {
     margin-left: 44px;
     margin-right: 44px;
-    padding: 50px 0 12px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -4574,7 +4574,6 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
 @media (max-width: 1000px) {
   .industry > .container:before {
     top: -50px;
-    bottom: -12px;
   }
 }
 .industry__list {
@@ -4587,23 +4586,22 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 @media (max-width: 1000px) {
   .industry__list {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 .industry__item {
-  width: 200px;
+  width: calc(100% / 6);
+  padding-right: 15px;
 }
-@media (max-width: 1470px) {
-  .industry__item {
-    padding-right: 20px;
-  }
+.industry__item:first-child {
+  margin-left: 0;
 }
 @media (max-width: 1000px) {
   .industry__item {
@@ -4620,6 +4618,13 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   .industry__item {
     width: 100%;
   }
+}
+.industry__hidden-container {
+  display: none;
+}
+.industry__btn {
+  margin: 30px auto 0;
+  display: block;
 }
 .industry__iconover {
   height: 40px;

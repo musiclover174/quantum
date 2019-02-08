@@ -145,7 +145,7 @@
   @media $LandscapeMax
     ml 44px
     mr 44px
-    padding 50px 0 12px
+    pt 50px
   @media $LandscapeMin
     mb 60px
   & > .container
@@ -166,18 +166,18 @@
         r -44px
       @media $LandscapeMax
         t -50px
-        b -12px
   &__list
     display flex
     align-items flex-start
     justify-content space-between
+    flex-wrap wrap
     @media $LandscapeMax
-      flex-wrap wrap
       justify-content flex-start
   &__item
-    w 200px
-    @media $desktopMax
-      pr 20px
+    w calc(100% / 6)
+    pr 15px
+    &:first-child
+      ml 0
     @media $LandscapeMax
       w calc(100% / 3)
       mb 32px
@@ -185,6 +185,11 @@
       w 50%
     @media $PortraitMedium
       w 100%
+  &__hidden-container
+    dn()
+  &__btn
+    margin 30px auto 0
+    db()
   &__iconover
     h 40px
     display flex
