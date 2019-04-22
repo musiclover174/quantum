@@ -177,6 +177,13 @@ input::-moz-placeholder
   color alpha(white, .5)
 input:-ms-input-placeholder
   color alpha(white, .5)
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+  transition background-color 5000s ease-in-out, 0s 0.7s border
+  -webkit-text-fill-color #fff !important
   
 body:not(.index) .content
   overflow hidden
@@ -621,12 +628,14 @@ textarea.warning
     size 1822px 823px
     l -53px
     t -56px
+    z-index -1
     @media $desktopMedium
       dn()
   &_elem12
     size 1955px 800px
     l -156px
     t -125px
+    z-index -1
     @media $desktopMedium
       dn()
   &_elem13

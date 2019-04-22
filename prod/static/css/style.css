@@ -498,6 +498,14 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
   color: rgba(255,255,255,0.5);
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out, 0s 0.7s border;
+  transition: background-color 5000s ease-in-out, 0s 0.7s border;
+  -webkit-text-fill-color: #fff !important;
+}
 body:not(.index) .content {
   overflow: hidden;
   padding-top: 65px;
@@ -1166,6 +1174,7 @@ textarea.warning {
   height: 823px;
   left: -53px;
   top: -56px;
+  z-index: -1;
 }
 @media (max-width: 1270px) {
   .orbit_elem11 {
@@ -1177,6 +1186,7 @@ textarea.warning {
   height: 800px;
   left: -156px;
   top: -125px;
+  z-index: -1;
 }
 @media (max-width: 1270px) {
   .orbit_elem12 {
@@ -5530,7 +5540,7 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
 }
 @media (max-width: 500px) {
   .catalog__filter-content {
-    padding: 15px 20px 7px 20px;
+    padding: 15px 20px 20px 20px;
   }
 }
 .catalog__filter-content .fakecheckbox {
@@ -5571,6 +5581,14 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   left: 6px;
   top: 16px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAALCAMAAACXmSduAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEUHXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///8ORmoaAAAAL3RSTlMAHsIwId+zJ+O+Cyrntwox67EGL8UgNe6p5Ss88aMDtOw2QvSaAgWm8vaUAZeOhjc8Zh8AAAABYktHRDCu3C3kAAAACXBIWXMAAAsSAAALEgHS3X78AAAAZUlEQVQI12NgQAKMTMzIXBZWfTYkLjuHPicXgsvNo8/Lh+DyC+gLCgFpYRFREFdMXF8CxGUQ1JeUYmCQltGXlQOr45PXV1BUUtZXUYVqVFPX19DU19KGm6Sqo6+vi+wObT09uCwA4SwHd99ev5oAAAAASUVORK5CYII=") no-repeat center;
+}
+.catalog__filter-content .text-right {
+  margin-left: 30px;
+}
+@media (max-width: 500px) {
+  .catalog__filter-content .text-right {
+    margin-left: 0;
+  }
 }
 .about {
   margin-bottom: 105px;
@@ -7174,6 +7192,7 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   position: absolute;
   right: 50px;
   height: 100%;
+  max-height: 700px;
   width: calc(50% - 50px);
   top: 0;
   overflow: hidden;
@@ -7875,4 +7894,8 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   object-fit: contain;
   font-family: 'object-fit: contain;';
   min-width: 100%;
+}
+.text-contact {
+  clear: both;
+  margin-top: 150px;
 }
