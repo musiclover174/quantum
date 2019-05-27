@@ -374,7 +374,7 @@
 
 			const map = new ymaps.Map(mapEl, {
 				center: [geo[0], geo[1]],
-				zoom: 14,
+				zoom: 13,
 				controls: [],
 				behaviors: ['default', 'scrollZoom']
 			})
@@ -433,7 +433,7 @@
       if (document.querySelector('.js-async-scroll')) this.asyncScroll()
       if (document.querySelector('.js-banner')) this.banner()
       if (document.querySelector('.js-serts')) this.serts()
-      if (document.querySelectorAll('.js-hover3d').length) this.hover3d()
+      // if (document.querySelectorAll('.js-hover3d').length) this.hover3d()
       if (document.querySelector('.js-contacts-map')) ymaps.ready(this.contacts)
       if (document.querySelector('.js-sticky')) this.sticky()
       if (document.querySelector('.js-filter-opener')) this.filter()
@@ -461,6 +461,11 @@
       })
 
       this.resizeWatcher()
+
+      document.querySelectorAll('.content *:not([class])').forEach((item) => {
+        item.innerHTML = item.innerHTML.replace(/( |&nbsp;|\(){1}([№а-яА-Я]){1}(\.){0,1} /g, '$1$2$3&nbsp;');
+        item.innerHTML = item.innerHTML.replace(/( |&nbsp;|\(){1}([№а-яА-Я]){1}(\.){0,1} /g, '$1$2$3&nbsp;');
+      });
 
       for (let sh of document.querySelectorAll('.js-shave')) {
         shave(sh, sh.getAttribute('data-height'))

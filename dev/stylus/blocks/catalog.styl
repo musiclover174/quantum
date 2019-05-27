@@ -87,7 +87,10 @@
       ml 40px
     @media $PortraitMedium
       w calc(100% - 40px)
-      mb 80px
+      &:not(:last-child)
+        mb 80px
+      &:last-child
+        mb 0
     &_more
       & ^[0]__name
         letter-spacing 0
@@ -220,6 +223,7 @@
     letter-spacing .1em
     padding 16px 45px
     transition .7s background
+    &.active,
     &:hover
       background-color #2d77ac
     & + &:before
@@ -237,6 +241,8 @@
     mb 10px
     border-radius 5px
     bgc #f6f7fb
+    .text-right
+      w calc(100% - 30px)
     &-opener
       padding 17px 40px
       @media $PortraitMedium
@@ -278,9 +284,9 @@
       flex-wrap wrap
       bgc white
       border-radius 0px 0px 5px 5px
-      padding 34px 40px 20px 10px
+      padding 34px 40px 34px 10px
       @media $PortraitMedium
-        padding 15px 20px 20px 20px
+        padding 15px 20px 15px 20px
       .fakecheckbox
         ml 30px
         mb 15px

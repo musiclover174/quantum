@@ -38,7 +38,7 @@
       mt 45px
     & ^[0]__content
       padding 0
-      pt 28px
+      pt 23px
       @media $LandscapeMedium
         min-height inherit
   .container
@@ -55,6 +55,9 @@
       ml -40px
     @media $desktopMedium
       pl 0
+    /.objects:not(.objects_inner) &
+      @media $PortraitMedium
+        mb 30px
     &_others
       pl 0
       pt 0
@@ -76,6 +79,11 @@
     bgc white
     border-radius 5px
     overflow hidden
+    /.objects_inner &:not(&_large) .objects__imgover
+      border-bottom-left-radius 5px
+      border-bottom-right-radius 5px
+    /.objects_inner &:not(&_large)
+      mb 50px
     @media $LandscapeMedium
       w calc(50% - 30px)
     @media $LandscapeMin
@@ -84,6 +92,9 @@
       mb 40px
     @media $PortraitMedium
       w calc(100% - 40px)
+    /.objects:not(.objects_inner) &
+      @media $PortraitMedium
+        mb 10px
     @media $LandscapeMediumMin
       &_large
         w 100%
@@ -92,18 +103,21 @@
         & ^[0]__imgover
           w 46%
         & ^[0]__date
-          mb 2px
+          mb 5px
         & ^[0]__href
-          fontify 24px 600 36px
+          fontify 24px 600 30px
         & ^[0]__content
           w 50%
-          max-width 475px
           padding 38px 30px 0 43px
   &__imgover
     db()
     pos relative
     pt 57%
     overflow hidden
+    @media $LandscapeMedium
+      /.objects_inner &
+        border-bottom-left-radius 5px
+        border-bottom-right-radius 5px
   &__img
     pos absolute
     l 0
@@ -119,6 +133,8 @@
   &__content
     padding 28px 30px 30px 30px
     min-height 151px
+    @media $PortraitMedium
+      min-height inherit
   &__date
     c alpha($dark, .4)
     fontify 12px 600 14px

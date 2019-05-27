@@ -59,18 +59,18 @@
     .swiper-button-next
       @media $desktopMax
         r 0
-    .swiper-button-prev, 
-    .swiper-button-next
-      bgc alpha(white, .4)
-      border-color transparent
-      &:before
-        opacity .4
-        transition .7s opacity, .7s background
-      &:hover
-        bgc alpha(#7ca8cb, .4)
-        &:before
-          opacity 1
-          background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOBAMAAADd6iHDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEX///////////////////////////////////////8V2MxSAAAACXRSTlMAZ2gt/f5vbmZgGN1IAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADVJREFUCNdjYAADIQYYYHYVgLNTA+FM9lCEcCmq8EwYCERmwhU0wLVFYBFMjUBYDBdk6ABiADq2ErVHYCDOAAAAAElFTkSuQmCC") no-repeat center
+    // .swiper-button-prev, 
+    // .swiper-button-next
+    //   bgc alpha(white, .4)
+    //   border-color transparent
+    //   &:before
+    //     opacity .4
+    //     transition .7s opacity, .7s background
+    //   &:hover
+    //     bgc alpha(#7ca8cb, .4)
+    //     &:before
+    //       opacity 1
+    //       background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOBAMAAADd6iHDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEX///////////////////////////////////////8V2MxSAAAACXRSTlMAZ2gt/f5vbmZgGN1IAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADVJREFUCNdjYAADIQYYYHYVgLNTA+FM9lCEcCmq8EwYCERmwhU0wLVFYBFMjUBYDBdk6ABiADq2ErVHYCDOAAAAAElFTkSuQmCC") no-repeat center
   &__content
     pos relative
     z-index 1
@@ -252,6 +252,7 @@
     border 2px solid alpha(white, .2)
     border-radius 50%
     box-shadow 0px 0px 0px 81px rgba(255,255,255,0.05)
+    transition .7s background-color
     span
       pos absolute
       l calc(100% + 32px)
@@ -267,6 +268,8 @@
         l 50%
         transform translateX(-50%)
         text-align center
+      @media $PortraitMin
+        fontify 16px 700 22px
     &:before
       content ""
       pos absolute
@@ -284,11 +287,14 @@
       t 17px
       size 7px 10px
       background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAMAAABPErQ/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEX////////////////////////////////////////////////////////////////////lEOhHAAAAEHRSTlMApg/gO/yBBMYi8VxbxSHfZoiy/AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAuSURBVAjXY2BkYgADAWYWCC3AysYOpgUEODghtAAXN5TmAdO8fEjq+CH6oOYAAFSiAhxY9LopAAAAAElFTkSuQmCC") no-repeat center 
-    &:hover:before
-      size 400px
-      border-color rgba(255,255,255,0)
-      
-      
+      transition .7s background-image
+    &:hover
+      bgc white
+      &:before
+        size 400px
+        border-color rgba(255,255,255,0)
+      &:after
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAMAAABPErQ/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///8ifcFPAAAAEHRSTlMApg/gO/yBBMYi8VxbxSHfZoiy/AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBRsKBwRWR0tqAAAALklEQVQI12NgZGIAAwFmFggtwMrGDqYFBDg4IbQAFzeU5gHTvHxI6vgh+qDmAABUogIcWPS6KQAAAABJRU5ErkJggg==')
       
 .geography
   bgc #3488da
@@ -296,6 +302,7 @@
   overflow hidden
   @media $LandscapeMin
     pt 70px
+    pb 10px
   @media $PortraitMedium
     pt 40px
   .container

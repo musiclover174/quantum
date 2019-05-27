@@ -26,7 +26,7 @@
     ml -30px
     w calc(100% + 30px)
     mt -5px
-    @media $LandscapeMin
+    @media $LandscapeMedium
       mt 0
       w 100%
       ml 0
@@ -36,29 +36,29 @@
       pl 100px
       @media $desktopMedium
         pl 70px
-      @media $LandscapeMin
+      @media $LandscapeMedium
         pl 0
   &__col
     ib()
     w calc(50% - 30px)
-    @media $LandscapeMin
+    @media $LandscapeMedium
       w 100%
     & + &
       ml 30px
       @media $LandscapeMax
         ml 55px
-      @media $LandscapeMin
+      @media $LandscapeMedium
         ml 0
         mt 20px
     &:first-child
       pl 100px
       @media $desktopMedium
         pl 71px
-      @media $LandscapeMin
+      @media $LandscapeMedium
         pl 0
     > *
-      max-width 395px
-      @media $LandscapeMin
+      max-width 470px
+      @media $LandscapeMedium
         max-width inherit
       
   &__top
@@ -98,20 +98,20 @@
       pos relative
       color $dark
       fontify 24px 600 36px
-      pt 33px
-      mt -4px
+      // pt 33px
+      // mt -4px
       @media $desktopMin
         fontify 20px 600 32px
       @media $LandscapeMedium
         fontify 18px 600 26px
-      &:before
-        content ""
-        pos absolute
-        l 0
-        t 0
-        h 2px 
-        bgc $blue
-        w 83px
+      // &:before
+      //   content ""
+      //   pos absolute
+      //   l 0
+      //   t 0
+      //   h 2px 
+      //   bgc $blue
+      //   w 83px
   &__mission
     pos relative
     padding 100px 0
@@ -192,6 +192,8 @@
     mb 96px
     pos relative
     z-index 1
+    @media $PortraitMedium
+      mb 60px
     &-title
       color $dark
       font-family $slab
@@ -213,7 +215,7 @@
       z-index 1
       w calc(25% - 30px)
       ml 30px
-      mb 7px
+      mb -5px
       padding 25px 15px 25px 29px
       @media $LandscapeMedium
         w calc(100% / 3 - 30px)
@@ -221,6 +223,7 @@
         w calc(50% - 30px)
       @media $PortraitMedium
         w calc(100% - 30px)
+        mb -17px
       &:before
         content ""
         pos absolute
@@ -284,6 +287,9 @@
       color $dark
       fontify 16px 300 24px
       max-width 310px
+      @media $PortraitMedium
+        &:first-letter
+          text-transform uppercase
     &-list
       df()
       justify-content center
@@ -413,6 +419,8 @@
       @media $PortraitMedium
         w 100%
         pr 0
+        min-height 45px
+        mb 15px
     &-icon
       mr 25px
     &-text
@@ -420,6 +428,8 @@
       fontify 18px 700 24px
     &-bimg
       text-align right
+      @media $LandscapeMin
+        dn()
     &-fire
       size 300px 200px
       bgc #d3d2d3
@@ -475,6 +485,9 @@
       opacity .3
       filter grayscale(100%)
       transition .7s opacity, .7s filter
+      @media $PortraitMedium
+        filter grayscale(0%)
+        opacity 1
       &:hover
         filter grayscale(0%)
         opacity 1

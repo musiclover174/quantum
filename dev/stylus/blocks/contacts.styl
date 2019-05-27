@@ -14,10 +14,14 @@
     @media $desktopMin
       pr 0
   &__mapover
-    pos absolute
+    // pos absolute
+    pos fixed 
+    z-index -1
+    h 100vh
+
     r 50px
-    h 100%
-    max-height 700px
+    // h 100%
+    // max-height 700px
     w calc(50% - 50px)
     t 0
     overflow hidden

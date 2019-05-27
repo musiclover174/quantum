@@ -5,17 +5,23 @@
   &__subtitle
     max-width 680px
     fontify 16px 300 24px
-    mb 42px
+    mb 62px
+    max-width 80%
+    @media $PortraitMedium
+      max-width 100%
   &__list
     display flex
     flex-wrap wrap
     align-items flex-start
+    mb -62px
+    @media $LandscapeMax
+      mb -20px
   &__item
     position relative
     w 50%
     pr 30px
-    pl 70px
-    mb 32px
+    pl 45px
+    mb 62px
     @media $PortraitMax
       pr 15px
     @media $PortraitMedium
@@ -25,15 +31,18 @@
       content ""
       pos absolute
       l 0
-      t 0
+      t -3px
       size 26px 31px
-      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAfCAMAAADOWS1PAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEX///8HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3///+sA4BaAAAAIHRSTlMAAE2+80yE+W4Sb3fyw8QoshvqjrgXav7YMWv3BRFO9M2YQY4AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAoElEQVQoz9XT2Q7CIBAF0EvphkLdrdbt/v9XOhW3Ao0x8cV5IeEQmEkuADKdM6hcFwpAyWSVQMGqNnIC6q1MXTGD5gQISakpNSxNigwtSKRIyf5ncs/W3Dg1X1z4/224cWp++NaLZnPrB4xosXzMHtGK640s27aNaMe9ly6iA493iRJFepH0hjkU6noRyiS9pwF5SWbeS08468vwm9xE4Qo2AyGtY6Rj1wAAAABJRU5ErkJggg==') no-repeat center
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAfCAMAAADOWS1PAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEUHXp3///8HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp0HXp3////7HZdZAAAAM3RSTlMAAE2+80yE9olCM4s58kEt7OoZIlFmUq27q7jMuSiyG0WBrI6/AWL9Y9hg9zr1iECYTvRT7tpJAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MFGws7JWgfSPwAAAC9SURBVCjPrdPZDoIwEAXQGcqqYAUVxX3Ffe3//5tFisG2IZhwX08yM0lvAcAgJpNiEgsRwHZcryXFazs2guX4UA7m8R0DiAs6QpdA0NGTFwCjeqKsBnW/h4cyRb0i0R8DK6g/KBLLNBwVSZrZVUHjCc9US/HnuAZ31aLZPMifQKFFmCyz5qzWCm22u2xeuj8odDwJQYXOFyGoNIrRTFLuSg855YJgSO1lVEjW+evtXqo7ewjhBE/y+vkmQvAN2IwgmrpVfvAAAAAASUVORK5CYII=') no-repeat center
   &__name
-    color $dark
+    // ib()
+    color $blue
     fontify 16px 700 24px
-    mb 12px
-    ml -23px
-    pt 4px
+    mr 12px
+    border-bottom 1px solid #b3d2f1
+    transition .7s border
+    &:hover
+      border-color transparent
   &__download
     pos relative
     ib()
@@ -57,7 +66,7 @@
     ib()
     color alpha(#222, .5)
     fontify 16px 300 24px
-    mt -6px
+    // mt -6px
   &__aside
     @media $LandscapeMax
       w 100%

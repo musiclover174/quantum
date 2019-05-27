@@ -154,13 +154,14 @@
     &:hover
       background-color alpha(#e8ebf5, .9)
   &__warntext
-    color #ff0f37
+    color #fff
     fontify 13px 300 15px
     width 175px
     mr 25px
     opacity 0
     transition .7s opacity
-    @media $PortraitMedium
+    // @media $PortraitMedium
+    @media $LandscapeMedium
       dn()
     ^[0]__form.warning &
       opacity 1
@@ -176,11 +177,11 @@
       mt 30px
       ml 0
       w 100%
-      justify-content space-between
-    @media $PortraitMedium
       flex-direction column
       justify-content flex-start
       align-items flex-start
+      // justify-content space-between
+    // @media $LandscapeMin
   &__bottom
     df(center)
     w 100%

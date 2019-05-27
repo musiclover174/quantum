@@ -141,9 +141,9 @@
     dn()
     pos fixed
     r 30px
-    t 35px
-    w 25px
-    h 25px
+    t 37px
+    w 26px
+    h 26px
     z-index 13
     @media $PortraitMax
       db()
@@ -202,6 +202,7 @@
 body:not(.index) .header:before
   content ""
   pos absolute
+  bgc white
   h 100%
   z-index -1
   t 0
@@ -224,12 +225,12 @@ body:not(.index) .header:before
   0%
     t 0
   40%
-    t 11px
+    t 12px
   60%
-    t 11px
+    t 12px
     transform rotate(0)
   100%
-    t 11px
+    t 12px
     transform rotate(45deg)
     
 @keyframes burger-bottom
