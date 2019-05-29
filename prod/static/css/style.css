@@ -6452,12 +6452,8 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   line-height: 24px;
 }
 .about__priorit-bimg {
+  display: none;
   text-align: right;
-}
-@media (max-width: 768px) {
-  .about__priorit-bimg {
-    display: none;
-  }
 }
 .about__priorit-fire {
   width: 300px;
