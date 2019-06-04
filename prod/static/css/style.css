@@ -3796,6 +3796,7 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   }
 }
 .footer {
+  position: relative;
   margin: 0 50px;
   background-color: #f5f5f5;
 }
@@ -7219,7 +7220,7 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
 }
 .contacts__mapover {
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   height: 100vh;
   right: 50px;
   width: calc(50% - 50px);
