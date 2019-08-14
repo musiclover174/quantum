@@ -79,9 +79,16 @@
     letter-spacing .1em
     padding 0 31px
     fontify 13px 700 49px
-    mb 51px
     @media $PortraitMin
       padding 0 17px
+    &-wrapper
+      df(flex-start)
+      justify-content space-between
+      mb 51px
+      @media $PortraitMedium
+        flex-direction column
+        .ya-share2
+          mt 30px
   &__features
     df()
     pt 6px

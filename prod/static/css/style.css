@@ -5266,6 +5266,14 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   -ms-flex-align: start;
   align-items: flex-start;
 }
+.catalog__sect + .wis-content {
+  margin-top: 80px;
+}
+@media (max-width: 500px) {
+  .catalog__sect + .wis-content {
+    margin-top: 40px;
+  }
+}
 .catalog__list + .pagination {
   margin-top: 60px;
 }
@@ -7770,11 +7778,33 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   font-size: 13px;
   font-weight: 700;
   line-height: 49px;
-  margin-bottom: 51px;
 }
 @media (max-width: 390px) {
   .card__order {
     padding: 0 17px;
+  }
+}
+.card__order-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 51px;
+}
+@media (max-width: 500px) {
+  .card__order-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .card__order-wrapper .ya-share2 {
+    margin-top: 30px;
   }
 }
 .card__features {
