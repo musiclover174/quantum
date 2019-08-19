@@ -5457,6 +5457,9 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   border-radius: 5px;
   background-color: #f6f7fb;
 }
+.catalog__filter + .catalog__over {
+  margin-top: 40px;
+}
 .catalog__filter .text-right {
   width: calc(100% - 30px);
 }
@@ -5530,9 +5533,13 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   display: none;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: #fff;
   border-radius: 0px 0px 5px 5px;
   padding: 34px 40px 34px 10px;
+}
+@media (max-width: 500px) {
+  .catalog__filter-content {
+    padding: 15px 20px 15px 20px;
+  }
 }
 .catalog__filter-content.open {
   display: -webkit-box;
@@ -5542,10 +5549,14 @@ html.touchevents .header__button:not(.open):hover .burger__button-meat {
   -ms-flex-align: start;
   align-items: flex-start;
 }
-@media (max-width: 500px) {
-  .catalog__filter-content {
-    padding: 15px 20px 15px 20px;
-  }
+.catalog__filter-content:not(.catalog__filter-content--blue) {
+  background-color: #fff;
+}
+.catalog__filter-content--blue {
+  padding-top: 11px;
+}
+.catalog__filter-content--blue .fakecheckbox__label:before {
+  background-color: #fff;
 }
 .catalog__filter-content .fakecheckbox {
   margin-left: 30px;

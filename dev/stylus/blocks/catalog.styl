@@ -245,6 +245,8 @@
     mb 10px
     border-radius 5px
     bgc #f6f7fb
+    & + ^[0]__over
+      mt 40px
     .text-right
       w calc(100% - 30px)
     &-opener
@@ -283,14 +285,19 @@
         transform rotate(180deg)
     &-content
       dn()
-      &.open
-        df()
       flex-wrap wrap
-      bgc white
       border-radius 0px 0px 5px 5px
       padding 34px 40px 34px 10px
       @media $PortraitMedium
         padding 15px 20px 15px 20px
+      &.open
+        df()
+      &:not(&--blue)
+        bgc white
+      &--blue
+        pt 11px
+        .fakecheckbox__label:before
+          bgc white
       .fakecheckbox
         ml 30px
         mb 15px
