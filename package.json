@@ -12,7 +12,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.4",
-    "compress-images": "^1.3.7",
+    "compress-images": "^1.9.9",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
@@ -28,6 +28,6 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "natives": "^1.1.6",
-    "npm": "^6.1.0"
+    "npm": "^6.14.18"
   }
 }
