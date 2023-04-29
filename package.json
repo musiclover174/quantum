@@ -28,6 +28,6 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "natives": "^1.1.6",
-    "npm": "^6.1.0"
+    "npm": "^9.6.5"
   }
 }
